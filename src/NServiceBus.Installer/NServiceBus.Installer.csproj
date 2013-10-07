@@ -37,7 +37,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\packages\GitFlowVersionTask.0.3.0\Build\GitFlowVersionTask.targets" Condition="Exists('..\packages\GitFlowVersionTask.0.3.0\Build\GitFlowVersionTask.targets')" />
+  <Import Project="..\packages\GitFlowVersionTask\Build\GitFlowVersionTask.targets" />
+  <Import Project="$(SolutionDir)..\BuildSupport\RippleRestoreTask.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
