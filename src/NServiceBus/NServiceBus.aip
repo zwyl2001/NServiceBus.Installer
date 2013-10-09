@@ -230,7 +230,7 @@
     <ATTRIBUTE name="CurrentBuild" value="DefaultBuild"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BuildEventsComponent">
-    <ROW EventId="0" EventRun="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" EventCmdLine="C:\Code\Particular\NServiceBus.Installer\src\NServiceBus\Support\unpackDependencies.ps1" EventWkDir="C:\Code\Particular\NServiceBus.Installer\src\NServiceBus" EventOrder="1" EventType="1" EventInterupt="true" EventEnabled="true" EventPrecompression="false"/>
+    <ROW EventId="0" EventRun="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" EventCmdLine="C:\Code\Particular\NServiceBus.Installer\src\NServiceBus\Support\unpackDependencies.ps1" EventWkDir="C:\Code\Particular\NServiceBus.Installer\src\NServiceBus" EventOrder="1" EventType="1" EventInterupt="true" EventEnabled="false" EventPrecompression="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
     <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
