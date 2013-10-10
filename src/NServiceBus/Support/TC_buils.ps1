@@ -18,6 +18,11 @@ function Exec
     }
 }
 
+function Get-ScriptDirectory
+{
+    Split-Path $script:MyInvocation.MyCommand.Path
+}
+
 $AdvancedInstallerPath = Get-RegistryValue "HKLM:\SOFTWARE\Wow6432Node\Caphyon\Advanced Installer\" "Advanced Installer Path" 
 
 $script:AdvinstCLI = $AdvancedInstallerPath + "bin\x86\AdvancedInstaller.com"
@@ -39,7 +44,7 @@ else
 
 $versionValue = "4.1.0.1" #"%GitFlowVersion.Major%.%GitFlowVersion.Minor%.%GitFlowVersion.Patch%"
 
-$baseDir = Split-Path (Resolve-Path $MyInvocation.MyCommand.Path)
+$baseDir = Get-ScriptDirectory
 
 $setupProjectFile = "$baseDir\src\NServiceBus\NServiceBus.aip"
 
