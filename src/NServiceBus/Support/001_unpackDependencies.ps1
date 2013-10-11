@@ -19,6 +19,13 @@ $packagesFolder = Resolve-Path '..\..\packages\'
 
 Write-Host("Copying Dependencies to $packagesFolder")
 
-Copy-Item $copyToPackagesFolder -Destination $packagesFolder -Recurse -force
+Copy-Item "$copyToPackagesFolder\Particular.CustomeActions\*" -Destination $packagesFolder -Recurse -force
+
+# bundles\ServiceControl
+$bundlesFolder = Resolve-Path '..\..\NServiceBus\bundles\'
+
+Write-Host("Copying Dependencies to $bundlesFolder")
+
+Copy-Item "$copyToPackagesFolder\NServiceBus.ServiceControl\*" -Destination $bundlesFolder -Recurse -force
 
 Write-Host("001_unpackDependencies done.")
