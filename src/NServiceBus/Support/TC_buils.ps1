@@ -18,20 +18,15 @@ function Exec
     }
 }
 
-function Get-ScriptDirectory
-{
-    Split-Path $script:MyInvocation.MyCommand.Path
-}
-
 $AdvancedInstallerPath = Get-RegistryValue "HKLM:\SOFTWARE\Wow6432Node\Caphyon\Advanced Installer\" "Advanced Installer Path" 
 
 $script:AdvinstCLI = $AdvancedInstallerPath + "bin\x86\AdvancedInstaller.com"
 
-$archive = "Particular.NServiceBus-4" # "Particular.NServiceBus-%GitFlowVersion.Version%" 
+$archive = "Particular.NServiceBus-%GitFlowVersion.Version%" 
 
-$stability = "alfa" #%GitFlowVersion.Stability%
+$stability = "%GitFlowVersion.Stability%"
 
-$preReleaseNameValue = "-alfa408" # "-%GitFlowVersion.Stability%%GitFlowVersion.PreReleaseNumber%"
+$preReleaseNameValue = "-%GitFlowVersion.Stability%%GitFlowVersion.PreReleaseNumber%"
 
 if($stability -eq "Final") 
 {
@@ -42,9 +37,9 @@ else
    $preReleaseName = $preReleaseNameValue
 }
 
-$versionValue = "4.1.0.1" #"%GitFlowVersion.Major%.%GitFlowVersion.Minor%.%GitFlowVersion.Patch%"
+$versionValue = "%GitFlowVersion.Major%.%GitFlowVersion.Minor%.%GitFlowVersion.Patch%"
 
-$baseDir = Get-ScriptDirectory
+$baseDir = "%teamcity.build.checkoutDir%"
 
 $setupProjectFile = "$baseDir\src\NServiceBus\NServiceBus.aip"
 
