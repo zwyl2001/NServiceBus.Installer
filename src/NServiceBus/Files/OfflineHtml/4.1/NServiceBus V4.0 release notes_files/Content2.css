@@ -1,0 +1,317 @@
+/*Common*/
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.clearfx {
+    clear: both;
+}
+
+.medium-margin-top {
+    margin-top: 30px;
+}
+
+.medium-margin-bottom {
+    margin-bottom: 30px;
+}
+
+.main-color {
+    color: #009ed9;
+}
+
+/*-----------------------------Contact Us-----------------------------------*/
+
+
+.secondary-color, .where {
+    color: #919e9e;
+}
+
+.contactus {
+    /*margin-bottom: 55px;*/
+    width: 100%;
+}
+
+    .contactus .icons {
+        width: 50px;
+        position: relative;
+    }
+
+        .contactus .icons img {
+            position: absolute;
+            top: 21px;
+        }
+
+    .contactus #contacts td {
+        height: 35px;
+    }
+
+    .contactus .left {
+        width: 60%;
+    }
+
+    .contactus .delimeter td {
+        padding-top: 20px;
+    }
+
+    .contactus #contactus {
+        margin-top: -20px;
+    }
+
+        .contactus #contactus .button {
+            width: 245px;
+        }
+
+#contact-us-block, #ask-a-question, #leave-comment-block {
+    margin: 34px 53px 42px 53px;
+}
+
+    #contact-us-block .controls input, #ask-a-question .controls input,  #leave-comment-block input {
+        width: 567px;
+    }
+
+
+    #contact-us-block img, #ask-a-question img, #leave-comment-block img {
+        margin-bottom: 32px;
+    }
+
+    #contact-us-block .header, #ask-a-question .header, #leave-comment-block .header {
+        margin-bottom: 35px;
+    }
+
+    #contact-us-block .form-horizontal, #ask-a-question .form-horizontal {
+        margin-top: 16px;
+    }
+
+    #contact-us-block .form-horizontal .firstname, #ask-a-question .form-horizontal .firstname {
+    margin-right: 30px;
+}
+
+/*---------------------------Online training------------------------------*/
+
+.online-training {
+    display: inline-block;
+}
+
+    .online-training .commercial-box {
+        display: inline-block;
+        padding-bottom: 30px;
+    }
+
+    .online-training .header {
+        margin: 25px 0px 30px 0px;
+    }
+
+    .online-training .commercial-box .image {
+        width: 35%;
+    }
+
+    .online-training .commercial-box .description {
+        width: 65%;
+    }
+
+    .online-training .commercial-box a {
+        margin-top: -7px;
+        display: block;
+    }
+
+    .online-training .description > div, .online-training .description > a {
+        font-weight: 600;
+    }
+
+    .online-training #free-videos .tab-content {
+        display: none;
+        margin-top: 72px;
+    }
+
+    .online-training #free-videos a.tab-header {
+        border-bottom: 1px solid #009ed9;
+        margin-left: -3px;
+        padding: 10px 0px;
+        text-align: center;
+        width: 220px;
+        display: inline-block;
+        margin-top: 11px;
+    }
+
+        .online-training #free-videos a.tab-header:first-child {
+            margin-left: 0px;
+        }
+
+        .online-training #free-videos a.tab-header.active {
+            color: white;
+            cursor: default;
+            font-weight: bold;
+            text-decoration: none;
+            background-color: #009ed9;
+        }
+
+    .online-training #free-videos .tab-content.active {
+        display: block;
+        width: 100%;
+    }
+
+    .online-training .search {
+        font-family: 'Lato', Regular;
+        font-size: 16px;
+        font-style: italic;
+        display: inline;
+        vertical-align: bottom;
+        float: left;
+        width: 170px;
+        margin: 0px;
+        border: 0px;
+        outline: 0px;
+        padding: 0px;
+        border-bottom: 1px solid #919e9e;
+        padding-left: 10px;
+        line-height: 24px;
+        width: 240px;
+    }
+
+    .online-training .search-button {
+        border: 0px;
+        margin: 0px;
+        margin-left: 3px;
+        cursor: pointer;
+        float: left;
+        display: inline;
+        background-color: #fff;
+        padding: 0px;
+        padding-top: 3px;
+    }
+
+    .online-training .search-container {
+        margin-top: 31px;
+    }
+
+    .online-training .sort {
+        display: block;
+    }
+
+        .online-training .sort ul {
+            float: left;
+            margin: 0px;
+            margin-top: 0px;
+            margin-left: -30px;
+        }
+
+        .online-training .sort li {
+            display: inline-block;
+            margin-left: 5px;
+        }
+
+        .online-training .sort .active a {
+            color: black;
+        }
+
+    .online-training .sort-by {
+        float: left;
+        color: #919e9e;
+    }
+
+    .online-training .sort {
+        float: right;
+        clear: both;
+        margin-top: 21px;
+        font-weight: 600;
+    }
+
+    .online-training .video-box {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+        .online-training .video-box .image {
+            width: 35%;
+        }
+
+        .online-training .video-box .description {
+            width: 65%;
+        }
+
+            .online-training .video-box .description > div {
+                margin-top: 8px;
+            }
+
+        .online-training .video-box .date-update {
+            margin-top: -7px;
+            display: block;
+            color: #919e9e;
+            font-weight: 600;
+        }
+
+/*careers*/
+
+.careers #customers {
+    clear: both;
+    margin-top: 45px;
+    float: left;
+}
+
+    .careers #customers .tab-content {
+        display: none;
+        margin-top: 59px;
+    }
+
+    .careers #customers a.tab-header {
+        border-bottom: 1px solid #009ed9;
+        margin-left: -3px;
+        padding: 8px 0px;
+        text-align: center;
+        width: 193px;
+        display: inline-block;
+        font-weight: 600;
+    }
+
+        .careers #customers a.tab-header:first-child {
+            margin-left: 0px;
+        }
+
+        .careers #customers a.tab-header.active {
+            color: white;
+            cursor: default;
+            font-weight: bold;
+            text-decoration: none;
+            background-color: #009ed9;
+        }
+
+    .careers #customers .tab-content.active {
+        display: block;
+        width: 972px;
+    }
+
+.careers .testimonial {
+    margin-top: -4px;
+}
+
+.careers .inner-testimonial {
+    width: 90%;
+    float: right;
+    background-color: #f0f4f5;
+    padding: 20px 40px 20px 40px;
+    margin-bottom: 50px;
+    line-height: 20px;
+    position: relative;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+    .careers .inner-testimonial img.triangle {
+        position: absolute;
+        top: 20px;
+        left: -40px;
+        margin-right: -50px;
+    }
+
+    .careers .inner-testimonial span {
+        margin-left: 10px;
+    }
+
+.customers-table .logo {
+    width: 200px;
+    vertical-align: top;
+}

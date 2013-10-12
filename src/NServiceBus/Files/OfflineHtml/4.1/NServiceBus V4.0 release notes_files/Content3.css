@@ -1,0 +1,287 @@
+/*comunity champions*/
+
+.star-mini {
+    margin-top: 0px;
+    margin-left: 5px;
+}
+
+.champions {
+    clear: both;
+    float: left;
+}
+
+.champions .header {
+    margin: 32px 0px 12px 0px;
+}
+
+.champions-list {
+    margin-bottom: 90px;
+}
+
+.champions-list, .recourses {
+    width: 30%;
+    float: left;
+}
+
+.champions-list ul, .recourses ul {
+    font-size: 16px;
+    font-family: 'Lato', Regular;
+    color: #009ed9;
+    line-height: 30px;
+    padding-left: 20px;
+    font-weight: 600;
+}
+
+.recourses ul {
+    line-height: 21px;
+}
+
+.champions-list ul li:hover {
+    color: black;
+}
+
+.champions-list ul a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.champions-list ul li.active, .champions-list ul li.active a {
+    color: #000 !important;
+}
+
+.champion {
+    width: 70%;
+    padding-top: 31px;
+    background-color: #f0f4f5;
+    float: left;
+    margin-top: 26px;
+}
+
+.champion > div {
+    margin-left: 50px;
+    margin-bottom: 30px;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+.champion .credential {
+    padding-top: 0px;
+    margin-left: 25px;
+    padding-bottom: 16px;
+    float: left;
+    width: 40%;
+}
+
+.champion .credential > p {
+    margin: 15px 0px 2px 0px;
+}
+
+.champion .credential strong {
+    font-size: 24px;
+    color: #000;
+}
+
+.champion .credential span {
+    color: #919e9e;
+    font-size: 16px;
+    display: block;
+}
+
+.champion .list .recourses ul {
+    margin: 0px 0px 25px 0px;
+}
+
+
+.champion .text {
+    font-size: 16px;
+    clear: both;
+    line-height: 28px;
+}
+
+.champion .text p {
+    margin: 20px 0px;
+}
+
+
+.champion .photo {
+    float: left;
+    padding-top: 5px;
+}
+
+.champion .star {
+    float: right;
+}
+
+.recourses {
+    font-weight: bold !important;
+}
+
+.champion .after-list {
+    clear: both;
+}
+
+.champion .subheader {
+    color: #000;
+    font-size: 20px;
+    font-family: 'Lato', 'Black';
+    letter-spacing: 0.05em;
+    padding: 15px 0px;
+}
+
+.champion .after-list > span {
+    color: #009ed9;
+    display: block;
+    font-weight: 600;
+}
+
+
+
+/*ns-bus*/
+.ns-bus {
+    text-align: center;
+}
+
+.feature-list {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.get-start {
+    float: left;
+    margin-bottom: 106px;
+}
+
+.get-start .download img {
+    float: left;
+    margin-right: 27px;
+    margin-top: 40px;
+}
+
+.get-start .download img:last-child {
+    margin-right: 0px !important;
+}
+
+.profiler {
+    /*margin-top: 50px;
+    margin-bottom: 40px;*/
+}
+
+.profiler img {
+    float: left;
+    margin-bottom: 50px;
+}
+
+
+.profiler img:first-child {
+    margin-right: 40px;
+    margin-left: 90px;
+}
+
+.profiler img:last-child {
+    margin-top: 50px;
+    margin-left: 90px;
+}
+
+.profiler-feature {
+    clear: both;
+    margin-top: 20px;
+}
+
+.profiler-feature > ul {
+    padding-left: 20px;
+}
+
+.profiler-feature div > ul > li {
+    font-weight: bold;
+}
+
+.profiler-feature > ul:first-child {
+    padding-right: 50px;
+}
+
+.inside-feature-list {
+    list-style: none;
+    font-size: 16px;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+/*.inside-feature-list li:before {
+    content: "-";
+    position: relative;
+    left: -15px;
+}*/
+
+.profiler-lists {
+    padding-top: 15px;
+}
+
+.profiler-lists > div {
+    float: left;
+    width: 50%;
+    padding-bottom: 30px;
+}
+
+
+/*OPS*/
+.ops {
+    margin-bottom: 45px;
+    margin-top: 30px;
+}
+
+/*.ops img {
+    float: left;
+    margin-bottom: 50px;
+}
+
+
+.ops img:first-child {
+    margin-right: 40px;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+.ops img:last-child {
+    margin-top: 0px;
+    margin-left: 123px;
+}*/
+
+
+/*Roadmap*/
+.roadmap {
+    margin-bottom: 60px;
+}
+
+.roadmap ul {
+    font-size: 16px;
+    line-height: 25px;
+    padding-left: 20px;
+}
+
+.roadmap ul li {
+    padding-bottom: 10px;
+}
+
+.grey-text {
+    color: #919e9e;
+    display: block;
+    font-size: 16px;
+}
+
+.job{
+    padding-top:  20px;
+    padding-bottom:  10px;
+}
+
+.job .title {
+    font-size: 16px;
+}
+
+.job .title .name {
+    font-size: 18px;
+}
+
+.job ul 
+{
+    padding-left: 20px;
+}

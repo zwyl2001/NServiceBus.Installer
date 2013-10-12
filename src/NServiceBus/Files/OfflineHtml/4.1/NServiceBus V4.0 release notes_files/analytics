@@ -1,0 +1,24 @@
+function piResponse() {
+piSetCookie('visitor_id27442', '422274872', 3650);
+
+if (document.location.protocol != "https:") {
+var analytics_link = "http://" + "go.particular.net/analytics?";
+pi.tracker.visitor_id='422274872'
+var variables = 'conly=true';
+for (property in pi.tracker) {
+	variables += "&"+property+"="+pi.tracker[property];
+}
+var headID = document.getElementsByTagName("head")[0];
+piScriptObj[piScriptNum] = document.createElement('script');
+piScriptObj[piScriptNum].type = 'text/javascript';
+piScriptObj[piScriptNum].src = analytics_link + variables;
+headID.appendChild(piScriptObj[piScriptNum]);
+piScriptObj[piScriptNum].onload = function() { return; }
+}
+}
+piResponse();
+
+
+
+
+(function(){"use strict";if(typeof piAId==="undefined"&&typeof piCId==="undefined"){return}var pardotHost="pi.pardot.com";if("pi.pardot.com"==="dev.localhost.com"){pardotHost="dev.localhost.com"}function trackWistia(){loadEmbedShepherd(function(){window.wistiaEmbeds.onFind(function(video){video.ready(function(){if(video.state()==="playing"||video.params.autoPlay){sendPlayToPardot(video)}else{video.bind("play",function(){sendPlayToPardot(video)})}video.bind("conversion",function(type,email){sendConversionToPardot(type,email,video)})})})})}var embedShepherdLoaded=false;function loadEmbedShepherd(callback){if(embedShepherdLoaded){return callback()}var scriptElements=document.getElementsByTagName("script");var regex=/embed_shepherd.*\.js/;var wistiaSrcFound=false;for(var i=0;i<scriptElements.length;i++){if(regex.test(scriptElements[i].src)){embedShepherdLoaded=true;return callback()}}writeScriptToHead("//fast.wistia.com/static/embed_shepherd-v1.js",function(){embedShepherdLoaded=true;callback()})}function writeScriptToHead(uri,callback){var head=document.head||document.getElementsByTagName("head")[0]||document.documentElement;var script=document.createElement("script");script.async="async";script.src=uri;script.onload=script.onreadystatechange=function(_,isAbort){if(isAbort||!script.readyState||/loaded|complete/.test(script.readyState)){script.onload=script.onreadystatechange=null;if(head&&script.parentNode){head.removeChild(script)}script=undefined;if(!isAbort){callback()}}};head.insertBefore(script,head.firstChild)}function writeToPardot(extraParams){var params={account_id:piAId,campaign_id:piCId,provider:"wistia"};if(typeof pi!=="undefined"){params.visitor_id=pi.tracker.visitor_id}else if(typeof pardot!=="undefined"){params.visitor_id=pardot.tracker.visitor_id}if(params.visitor_id===""){params.visitor_id=piGetCookie("visitor_id"+(piAId-1e3))}var parametersString=objectToParameterString(extend(params,extraParams));var src="//"+pardotHost+"/video/analytics?"+parametersString;writeScriptToHead(src,function(){return})}function sendPlayToPardot(video){writeToPardot({video_name:video.name(),wistia_visitor_key:video.getVisitorKey(),wistia_event_key:video.getEventKey(),hashed_id:video.hashedId(),type:"play"});video.unbind("play")}function sendConversionToPardot(type,email,video){writeToPardot({video_name:video.name(),wistia_visitor_key:video.getVisitorKey(),wistia_event_key:video.getEventKey(),hashed_id:video.hashedId(),type:"conversion",email:email})}function extend(){var key,base=arguments[0];for(var i=1;i<arguments.length;i++){for(key in arguments[i]){base[key]=arguments[i][key]}}return base}function objectToParameterString(parametersObject){var parametersString="";for(var key in parametersObject){if(parametersObject.hasOwnProperty(key)){parametersString+=encodeURIComponent(key)+"="+encodeURIComponent(parametersObject[key])+"&"}}return parametersString.substring(0,parametersString.length-1)}return trackWistia()})();
