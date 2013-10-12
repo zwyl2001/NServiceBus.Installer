@@ -51,6 +51,7 @@
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
     <ROW Directory="Tools_Dir" Directory_Parent="NServiceBus_Dir" DefaultDir="Tools"/>
     <ROW Directory="__Dir" Directory_Parent="OfflineHtml_Dir" DefaultDir="4.1"/>
+    <ROW Directory="containers_Dir" Directory_Parent="Binaries_Dir" DefaultDir="contai~1|containers"/>
     <ROW Directory="licenseinstaller_Dir" Directory_Parent="Tools_Dir" DefaultDir="licens~1|licenseinstaller"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
@@ -78,8 +79,8 @@
     <ROW Component="UsageDataCollectionApproved" ComponentId="{D100EEE4-6068-4DDD-B406-9A3486FF1818}" Directory_="APPDIR" Attributes="4" KeyPath="UsageDataCollectionApproved"/>
     <ROW Component="UsageDataCollectionApproved_1" ComponentId="{E614B0BE-1EA8-452F-A2E2-639BBEB350E8}" Directory_="APPDIR" Attributes="260" KeyPath="UsageDataCollectionApproved_1"/>
     <ROW Component="X64_REG" ComponentId="{74308995-DEDD-4E41-9650-34AC460FD5D2}" Directory_="APPDIR" Attributes="260" KeyPath="X64_REG"/>
-    <ROW Component="about_NServiceBus.help.txt" ComponentId="{F4E5ECC1-D889-4702-B059-9AF1BCA23597}" Directory_="Binaries_Dir" Attributes="0" KeyPath="Dummy.md" Type="0"/>
     <ROW Component="analytics" ComponentId="{E4BCE303-5406-4852-A35D-58F788F561DE}" Directory_="NServiceBusV4.0releasenotes_files_Dir" Attributes="0" KeyPath="analytics" Type="0"/>
+    <ROW Component="containers" ComponentId="{6F5FA420-1647-4DF6-987B-14D2AE9CAA8F}" Directory_="containers_Dir" Attributes="0"/>
     <ROW Component="ga.js" ComponentId="{DA8DE890-E8AE-4E43-AD9C-6DA3E044EA3D}" Directory_="NServiceBus4.0BetaReleaseNotes_files_Dir" Attributes="0" KeyPath="ga.js" Type="0"/>
     <ROW Component="licenseinstaller" ComponentId="{C0CC7B63-4734-4546-95E5-805D117FE722}" Directory_="licenseinstaller_Dir" Attributes="0"/>
   </COMPONENT>
@@ -87,7 +88,7 @@
     <ROW Feature="DTC" Feature_Parent="PrepMachine" Title="Install DTC" Description="Install Microsoft Message Queuing (requires DTC)" Display="3" Level="1" Directory_="APPDIR" Attributes="0" Components="AI_CustomARPName INSTALL_RAVENDB"/>
     <ROW Feature="MSMQ" Feature_Parent="DTC" Title="Install MSMQ" Description="Install the Microsoft Distributed Transaction Coordinator (required for MSMQ)" Display="3" Level="1" Directory_="APPDIR" Attributes="0" Components="AI_CustomARPName INSTALL_RAVENDB"/>
     <ROW Feature="ManagementPack" Feature_Parent="NServiceBus" Title="Management Service" Description="Install Management Service for NServiceBus" Display="6" Level="32767" Attributes="0" Options="32" Components="AI_CustomARPName INSTALL_RAVENDB Port"/>
-    <ROW Feature="NServiceBus" Title="NServiceBus" Description="NServiceBus main application" Display="3" Level="1" Directory_="APPDIR" Attributes="16" Components="AI_CustomARPName AuditQueue BinariesSH ErrorQueue INSTALL_RAVENDB ProductInformation SHORTCUTDIR Samples_SH Tools_SH UploadEndpointURL UsageDataCollectionApproved about_NServiceBus.help.txt"/>
+    <ROW Feature="NServiceBus" Title="NServiceBus" Description="NServiceBus main application" Display="3" Level="1" Directory_="APPDIR" Attributes="16" Components="AI_CustomARPName AuditQueue BinariesSH ErrorQueue INSTALL_RAVENDB ProductInformation SHORTCUTDIR Samples_SH Tools_SH UploadEndpointURL UsageDataCollectionApproved containers"/>
     <ROW Feature="PrepMachine" Feature_Parent="NServiceBus" Title="Prepare My Machine" Description="Install Windows components used by some of NServiceBus features" Display="9" Level="1" Directory_="APPDIR" Attributes="0" Components="AI_CustomARPName INSTALL_RAVENDB"/>
     <ROW Feature="Samples" Feature_Parent="NServiceBus" Title="Samples" Description="Install the NServiceBus samples directory" Display="5" Level="1" Directory_="APPDIR" Attributes="0" Components="AI_CustomARPName INSTALL_RAVENDB Samples"/>
     <ROW Feature="Tools" Feature_Parent="NServiceBus" Title="Tools" Description="Install the NServiceBus command-line and utilities directory" Display="3" Level="1" Directory_="APPDIR" Attributes="0" Components="AI_CustomARPName AI_ExePath AuditQueue_1 ErrorQueue_1 INSTALL_RAVENDB LICENSE.md NServiceBus4.0BetaReleaseNotes.htm NServiceBusV4.0releasenotes.htm ServiceBus TrialStart UploadEndpointURL_1 UsageDataCollectionApproved_1 X64_REG analytics ga.js licenseinstaller"/>
@@ -97,7 +98,6 @@
     <ROW File="Content.css" Component_="analytics" FileName="Content.css" Attributes="0" SourcePath="Files\OfflineHtml\4.1\NServiceBus V4.0 release notes_files\Content.css" SelfReg="false" NextFile="Content2.css"/>
     <ROW File="Content2.css" Component_="analytics" FileName="Content2.css" Attributes="0" SourcePath="Files\OfflineHtml\4.1\NServiceBus V4.0 release notes_files\Content2.css" SelfReg="false" NextFile="Content3.css"/>
     <ROW File="Content3.css" Component_="analytics" FileName="Content3.css" Attributes="0" SourcePath="Files\OfflineHtml\4.1\NServiceBus V4.0 release notes_files\Content3.css" SelfReg="false" NextFile="css"/>
-    <ROW File="Dummy.md" Component_="about_NServiceBus.help.txt" FileName="Dummy.md" Attributes="0" SourcePath="..\Release\binaries\Dummy.md" SelfReg="false"/>
     <ROW File="LICENSE.md" Component_="LICENSE.md" FileName="LICENSE.md" Attributes="0" SourcePath="..\Release\LICENSE.md" SelfReg="false" NextFile="README.md"/>
     <ROW File="NSBSearchIcon.png" Component_="ga.js" FileName="NSBSea~1.png|NSBSearchIcon.png" Attributes="0" SourcePath="Files\OfflineHtml\NServiceBus 4.0 Beta Release Notes_files\NSBSearchIcon.png" SelfReg="false" NextFile="NSBStyle.css"/>
     <ROW File="NSBStyle.css" Component_="ga.js" FileName="NSBStyle.css" Attributes="0" SourcePath="Files\OfflineHtml\NServiceBus 4.0 Beta Release Notes_files\NSBStyle.css" SelfReg="false" NextFile="NServiceBusLogo_black.png"/>
@@ -142,7 +142,7 @@
     <ROW File="style.css" Component_="ga.js" FileName="style.css" Attributes="0" SourcePath="Files\OfflineHtml\NServiceBus 4.0 Beta Release Notes_files\style.css" SelfReg="false" NextFile="tooltipster.css"/>
     <ROW File="tooltipster.css" Component_="ga.js" FileName="toolti~1.css|tooltipster.css" Attributes="0" SourcePath="Files\OfflineHtml\NServiceBus 4.0 Beta Release Notes_files\tooltipster.css" SelfReg="false" NextFile="NServiceBusV4.0releasenotes.htm"/>
     <ROW File="triangledown.png" Component_="analytics" FileName="triang~1.png|triangle-down.png" Attributes="0" SourcePath="Files\OfflineHtml\4.1\NServiceBus V4.0 release notes_files\triangle-down.png" SelfReg="false" NextFile="triangleup.png"/>
-    <ROW File="triangleup.png" Component_="analytics" FileName="triang~2.png|triangle-up.png" Attributes="0" SourcePath="Files\OfflineHtml\4.1\NServiceBus V4.0 release notes_files\triangle-up.png" SelfReg="false" NextFile="Dummy.md"/>
+    <ROW File="triangleup.png" Component_="analytics" FileName="triang~2.png|triangle-up.png" Attributes="0" SourcePath="Files\OfflineHtml\4.1\NServiceBus V4.0 release notes_files\triangle-up.png" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AiPersistentPropComponent">
     <ROW Property="INSTALL_RAVENDB" Registry="INSTALL_RAVENDB" HklmSearch="INSTALL_RAVENDB" HkcuSearch="INSTALL_RAVENDB_1"/>
@@ -473,6 +473,7 @@
     <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR"/>
     <ROW Directory_="Samples_Dir" Component_="Samples"/>
     <ROW Directory_="licenseinstaller_Dir" Component_="licenseinstaller"/>
+    <ROW Directory_="containers_Dir" Component_="containers"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
     <ROW Action="AI_AppSearchEx" Type="1" Source="Prereq.dll" Target="DoAppSearchEx"/>
@@ -508,7 +509,7 @@
     <ROW Action="InstallMsmq" Type="1025" Source="Particular.CustomActions.CA.dll" Target="InstallMsmq"/>
     <ROW Action="InstallPerformanceCounters" Type="1025" Source="Particular.CustomActions.CA.dll" Target="InstallPerformanceCounters"/>
     <ROW Action="InstallRavenDb" Type="1025" Source="Particular.CustomActions.CA.dll" Target="InstallRavenDb"/>
-    <ROW Action="Launch_Offline_HTML" Type="194" Source="viewer.exe" Target="&quot;[#NServiceBus4.0BetaReleaseNotes.htm]&quot;" Options="1"/>
+    <ROW Action="Launch_Offline_HTML" Type="194" Source="viewer.exe" Target="&quot;[#NServiceBusV4.0releasenotes.htm]&quot;" Options="1"/>
     <ROW Action="Launch_Online_URL" Type="194" Source="viewer.exe" Target="http://www.particular.net/Installation-completed?installer=NServiceBus" Options="1"/>
     <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[ProgramFilesFolder]Particular Software\[ProductName]\v[MY_VERSION]"/>
     <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]" MultiBuildTarget="DefaultBuild:[ProgramMenuFolder]Particular Software\[ProductName]\v[MY_VERSION]"/>
@@ -649,7 +650,7 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.SynchronizedFolderComponent">
     <ROW Directory_="OfflineHtml_Dir" SourcePath="Files\OfflineHtml" Feature="Tools" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store" ExcludeFlags="6"/>
-    <ROW Directory_="Binaries_Dir" SourcePath="..\Release\binaries" Feature="NServiceBus" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store|dummy.dm" ExcludeFlags="6"/>
+    <ROW Directory_="Binaries_Dir" SourcePath="..\Release\binaries" Feature="NServiceBus" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store|dummy.md" ExcludeFlags="6"/>
     <ROW Directory_="Samples_Dir" SourcePath="..\Release\samples" Feature="Samples" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store|dummy.md" ExcludeFlags="6"/>
     <ROW Directory_="Tools_Dir" SourcePath="..\Release\tools" Feature="Tools" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store|dummy.md" ExcludeFlags="6"/>
   </COMPONENT>
