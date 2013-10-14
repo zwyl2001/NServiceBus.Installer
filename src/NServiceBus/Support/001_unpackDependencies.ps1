@@ -17,9 +17,6 @@ $copyToPackagesFolder = Resolve-Path '..\Dependencies\packages\'
 
 $res_binaryFolder = Resolve-Path '..\..\NServiceBus\res-binary\'
 
-Write-Host("Copying Dependencies to $res_binaryFolder")
-
-Copy-Item "$copyToPackagesFolder\Particular.CustomActions\*" -Destination $res_binaryFolder -Recurse -force
 
 # bundles\ServiceControl
 $bundlesFolder = Resolve-Path '..\..\NServiceBus\bundles\'
