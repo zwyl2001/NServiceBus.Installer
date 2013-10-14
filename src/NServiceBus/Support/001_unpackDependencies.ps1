@@ -6,10 +6,6 @@ $targetSamplesFolder = Resolve-Path '..\..\Release\samples'
 
  Write-Host("Extracting Samples to $targetSamplesFolder")
 
-[System.IO.Compression.ZipFile]::ExtractToDirectory( "$samplesZipFile\NServiceBus.Samples.Transports1.zip", $targetSamplesFolder)
-
-[System.IO.Compression.ZipFile]::ExtractToDirectory("$samplesZipFile\NServiceBus.Samples.Transports2.zip", $targetSamplesFolder)
-
 [System.IO.Compression.ZipFile]::ExtractToDirectory("$samplesZipFile\NServiceBus.Samples.zip", $targetSamplesFolder)
 
 $dependenciesPackagesFolder = Resolve-Path '..\Dependencies\packages\'
