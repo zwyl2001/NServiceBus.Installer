@@ -76,7 +76,7 @@ $res_binaryFolder = Resolve-Path '..\..\NServiceBus\res-binary\'
 
 Write-Host("Copying Dependencies to $res_binaryFolder")
 
-Copy-Item "$packagesFolder\Particular.CustomActions\lib\net40\" -Destination $res_binaryFolder -Recurse -force
+Copy-Item "$packagesFolder\Particular.CustomActions\lib\net40\*" -Destination $res_binaryFolder -Recurse -force
 
 
 Write-Host("002_copyToBinaries done.")
