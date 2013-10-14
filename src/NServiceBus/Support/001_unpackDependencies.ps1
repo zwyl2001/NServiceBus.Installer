@@ -12,17 +12,13 @@ $targetSamplesFolder = Resolve-Path '..\..\Release\samples'
 
 [System.IO.Compression.ZipFile]::ExtractToDirectory("$samplesZipFile\NServiceBus.Samples.zip", $targetSamplesFolder)
 
-$copyToPackagesFolder = Resolve-Path '..\Dependencies\packages\'
-
-
-$res_binaryFolder = Resolve-Path '..\..\NServiceBus\res-binary\'
-
+$dependenciesPackagesFolder = Resolve-Path '..\Dependencies\packages\'
 
 # bundles\ServiceControl
 $bundlesFolder = Resolve-Path '..\..\NServiceBus\bundles\'
 
 Write-Host("Copying Dependencies to $bundlesFolder")
 
-Copy-Item "$copyToPackagesFolder\NServiceBus.ServiceControl\*" -Destination $bundlesFolder -Recurse -force
+Copy-Item "$dependenciesPackagesFolder\NServiceBus.ServiceControl\*" -Destination $bundlesFolder -Recurse -force
 
 Write-Host("001_unpackDependencies done.")
