@@ -38,9 +38,17 @@ $copy = 1
 
 #containers
 
-$includeSubDirectory = "$packagesFolder\NServiceBus.Autofac", "$packagesFolder\NServiceBus.CastleWindsor", "$packagesFolder\NServiceBus.Ninject", "$packagesFolder\NServiceBus.Spring", "$packagesFolder\NServiceBus.StructureMap", "$packagesFolder\NServiceBus.Unity"
- 
 Write-Host("Copying containers...")
+
+# rename to make samples work:
+Rename-Item "$packagesFolder\NServiceBus.Autofac" "$packagesFolder\autofac"
+Rename-Item "$packagesFolder\NServiceBus.CastleWindsor" "$packagesFolder\castle"
+Rename-Item "$packagesFolder\NServiceBus.Ninject" "$packagesFolder\ninject"
+Rename-Item "$packagesFolder\NServiceBus.Spring" "$packagesFolder\spring"
+Rename-Item "$packagesFolder\NServiceBus.StructureMap" "$packagesFolder\structuremap"
+Rename-Item "$packagesFolder\NServiceBus.Unity" "$packagesFolder\unity"
+
+$includeSubDirectory = "$packagesFolder\autofac", "$packagesFolder\castle", "$packagesFolder\ninject", "$packagesFolder\spring", "$packagesFolder\structuremap", "$packagesFolder\unity"
 
 foreach($container in $includeSubDirectory.Split())
 {
