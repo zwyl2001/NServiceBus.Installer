@@ -21,7 +21,7 @@
     <ROW Property="BINARIES_SH" Value="create" Type="4"/>
     <ROW Property="ERROR_Q" Value="error" Type="4"/>
     <ROW Property="INSTALL_RAVENDB" Value="ImageCheckBox"/>
-    <ROW Property="MY_VERSION" Value="4.0"/>
+    <ROW Property="MY_VERSION" Value="4.1"/>
     <ROW Property="Manufacturer" Value="Particular Software Ltd."/>
     <ROW Property="OPT_PRERELEASE_NAME" Value="-alpha0"/>
     <ROW Property="PORT_VAL.CB8171C5_FE21_41EE_BC42_72123C0AD0F7" Value="33333"/>
