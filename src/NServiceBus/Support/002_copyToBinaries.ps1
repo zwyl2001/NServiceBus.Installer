@@ -6,11 +6,11 @@ $binariesFolder = Resolve-Path '..\..\Release\binaries'
 
 $toolsFolder = Resolve-Path '..\..\Release\Tools'
 
-$includeFileList = "*.exe","*.pdb","*.xml","*.dll"
+$includeFileList = "*.exe","*.pdb","*.xml","*.dll", "*.config"
 
-$excluedFileList = "*Apache.*","Microsoft.*", "Ionic.*"
+$excluedFileList = "*Apache.*","Microsoft.*", "Ionic.*", "Dummy.md"
 
-$excludeSubDirectory = "$packagesFolder\Fody", "$packagesFolder\GitFlowVersion.Fody", "$packagesFolder\GitFlowVersionTask", "$packagesFolder\log4net", "$packagesFolder\NServiceBus.Host32", "$packagesFolder\NServiceBus.Autofac", "$packagesFolder\NServiceBus.Ninject", "$packagesFolder\NServiceBus.Spring", "$packagesFolder\NServiceBus.StructureMap", "$packagesFolder\NServiceBus.Unity", "$packagesFolder\NServiceBus.Tools", "$packagesFolder\Particular.CustomActions"
+$excludeSubDirectory = "$packagesFolder\Fody", "$packagesFolder\GitFlowVersion.Fody", "$packagesFolder\GitFlowVersionTask", "$packagesFolder\log4net", "$packagesFolder\NServiceBus.Host32", "$packagesFolder\NServiceBus.Autofac", "$packagesFolder\NServiceBus.CastleWindsor", "$packagesFolder\NServiceBus.Ninject", "$packagesFolder\NServiceBus.Spring", "$packagesFolder\NServiceBus.StructureMap", "$packagesFolder\NServiceBus.Unity", "$packagesFolder\NServiceBus.Tools", "$packagesFolder\Particular.CustomActions"
 
 Write-Host("Copying binaries and tools...")
 
@@ -38,7 +38,7 @@ $copy = 1
 
 #containers
 
-$includeSubDirectory = "$packagesFolder\NServiceBus.Autofac", "$packagesFolder\NServiceBus.Ninject", "$packagesFolder\NServiceBus.Spring", "$packagesFolder\NServiceBus.StructureMap", "$packagesFolder\NServiceBus.Unity"
+$includeSubDirectory = "$packagesFolder\NServiceBus.Autofac", "$packagesFolder\NServiceBus.CastleWindsor", "$packagesFolder\NServiceBus.Ninject", "$packagesFolder\NServiceBus.Spring", "$packagesFolder\NServiceBus.StructureMap", "$packagesFolder\NServiceBus.Unity"
  
 Write-Host("Copying containers...")
 
