@@ -391,7 +391,6 @@
     <ROW Component="OrderCancelledHandler.cs_6" ComponentId="{A03F31C5-644D-4CB1-9C26-CC8B7DE6C574}" Directory_="Handlers_6_Dir" Attributes="0" KeyPath="OrderCancelledHandler.cs_6" Type="0"/>
     <ROW Component="OrderPlaced.cs" ComponentId="{97302861-65CE-4070-9E1D-7906C7D8F39B}" Directory_="Orders.Messages_Dir" Attributes="0" KeyPath="OrderPlaced.cs" Type="0"/>
     <ROW Component="Orders.Handler.Worker2.csproj" ComponentId="{165AA17D-85AC-4F44-9978-5BDA9730E872}" Directory_="Orders.Handler.Worker2_Dir" Attributes="0" KeyPath="Orders.Handler.Worker2.csproj" Type="0"/>
-    <ROW Component="Port" ComponentId="{061C5F0D-1CAD-434E-960E-C603317BBC21}" Directory_="APPDIR" Attributes="260" KeyPath="Port"/>
     <ROW Component="ProductInformation" ComponentId="{E4677B4C-C6E7-4FB9-8DF5-7AFE47955CD3}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
     <ROW Component="ProvisionDownloadRequest.cs" ComponentId="{48E99D48-EA69-4A3B-84A3-253186B746AA}" Directory_="RequestResponse_Dir" Attributes="0" KeyPath="ProvisionDownloadRequest.cs" Type="0"/>
     <ROW Component="ProvisionDownloadRequest.cs_4" ComponentId="{38FEF71E-6EEC-45B6-8714-D7F6A9081B1A}" Directory_="RequestResponse_4_Dir" Attributes="0" KeyPath="ProvisionDownloadRequest.cs_4" Type="0"/>
@@ -448,7 +447,6 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="DTC" Feature_Parent="PrepMachine" Title="Install DTC" Description="Install Microsoft Message Queuing (requires DTC)" Display="3" Level="1" Directory_="APPDIR" Attributes="0" Components="INSTALL_RAVENDB"/>
     <ROW Feature="MSMQ" Feature_Parent="DTC" Title="Install MSMQ" Description="Install the Microsoft Distributed Transaction Coordinator (required for MSMQ)" Display="3" Level="1" Directory_="APPDIR" Attributes="0" Components="INSTALL_RAVENDB"/>
-    <ROW Feature="ManagementPack" Feature_Parent="NServiceBus" Title="Management Service" Description="Install Management Service for NServiceBus" Display="6" Level="32767" Attributes="0" Options="32" Components="INSTALL_RAVENDB Port"/>
     <ROW Feature="NServiceBus" Title="NServiceBus" Description="NServiceBus main application" Display="3" Level="1" Directory_="APPDIR" Attributes="16" Components="Apache.NMS.ActiveMQ.dll AuditQueue BinariesSH ErrorQueue INSTALL_RAVENDB Ionic.Zip.dll Microsoft.WindowsAzure.Diagnostics.dll Microsoft.WindowsAzure.ServiceRuntime.dl NServiceBus.Azure.dll NServiceBus.Core.dll NServiceBus.Host.exe NServiceBus.Hosting.Azure.HostProcess.ex NServiceBus.Hosting.Azure.dll NServiceBus.NHibernate.dll NServiceBus.Notifications.dll NServiceBus.ObjectBuilder.Autofac.XML NServiceBus.ObjectBuilder.Autofac.dll NServiceBus.ObjectBuilder.CastleWindso_2 NServiceBus.ObjectBuilder.CastleWindsor. NServiceBus.ObjectBuilder.Ninject.XML NServiceBus.ObjectBuilder.Ninject.dll NServiceBus.ObjectBuilder.Spring.XML NServiceBus.ObjectBuilder.Spring.dll NServiceBus.ObjectBuilder.StructureMap.X NServiceBus.ObjectBuilder.StructureMap.d NServiceBus.ObjectBuilder.Unity.XML NServiceBus.ObjectBuilder.Unity.dll NServiceBus.PowerShell.dll NServiceBus.Testing.dll NServiceBus.Timeout.Hosting.Azure.dll NServiceBus.Transports.ActiveMQ.dll NServiceBus.Transports.RabbitMQ.dll NServiceBus.Transports.SQLServer.dll NServiceBus.dll ProductInformation SHORTCUTDIR Samples_SH Tools_SH UploadEndpointURL UsageDataCollectionApproved about_NServiceBus.help.txt log4net.dll"/>
     <ROW Feature="PrepMachine" Feature_Parent="NServiceBus" Title="Prepare My Machine" Description="Install Windows components used by some of NServiceBus features" Display="9" Level="1" Directory_="APPDIR" Attributes="0" Components="INSTALL_RAVENDB"/>
     <ROW Feature="Samples" Feature_Parent="NServiceBus" Title="Samples" Description="Install the NServiceBus samples directory" Display="5" Level="1" Directory_="APPDIR" Attributes="0" Components="AnotherEventMessageHandler.cs App.config App.config_29 App.config_30 App.config_31 App.config_32 App.config_33 App.config_34 App.config_35 App.config_36 App.config_37 App.config_38 App.config_39 App.config_40 App.config_41 App.config_42 App.config_43 App.config_44 App.config_45 App.config_46 App.config_47 App.config_48 App.config_49 App.config_50 App.config_51 App.config_52 App.config_53 App.config_54 App.config_55 App.config_56 Application.cs AssemblyInfo.cs AssemblyInfo.cs_44 AssemblyInfo.cs_45 AssemblyInfo.cs_46 AssemblyInfo.cs_47 AssemblyInfo.cs_48 AssemblyInfo.cs_49 AssemblyInfo.cs_50 AssemblyInfo.cs_51 AssemblyInfo.cs_52 AssemblyInfo.cs_53 AssemblyInfo.cs_54 AssemblyInfo.cs_55 AssemblyInfo.cs_56 AssemblyInfo.cs_57 AssemblyInfo.cs_58 AssemblyInfo.cs_59 AssemblyInfo.cs_60 AssemblyInfo.cs_61 AssemblyInfo.cs_62 AssemblyInfo.cs_63 AssemblyInfo.cs_64 AssemblyInfo.cs_65 AssemblyInfo.cs_66 AssemblyInfo.cs_67 AssemblyInfo.cs_68 AssemblyInfo.cs_69 AssemblyInfo.cs_70 AssemblyInfo.cs_71 AssemblyInfo.cs_72 AssemblyInfo.cs_73 AssemblyInfo.cs_74 AssemblyInfo.cs_75 AssemblyInfo.cs_76 AssemblyInfo.cs_77 AssemblyInfo.cs_78 AssemblyInfo.cs_79 AssemblyInfo.cs_80 AssemblyInfo.cs_81 AssemblyInfo.cs_82 AssemblyInfo.cs_83 AssemblyInfo.cs_84 AssemblyInfo.cs_85 AssemblyInfo.cs_86 AuditInspector.cs CancelOrder.cs CancelOrder.cs_4 CancelOrder.cs_5 CancelOrder.cs_6 ClientBecamePreferred.cs ClientBecamePreferred.cs_4 ClientBecamePreferred.cs_5 ClientBecamePreferred.cs_6 CustomHttpResponder.cs ErrorHandling.sln FilterConfig.cs FilterConfig.cs_4 FilterConfig.cs_5 FilterConfig.cs_6 Gateway.sln Global.asax Global.asax_4 Global.asax_5 Global.asax_6 Headquarter.Messages.csproj HomeController.cs HomeController.cs_4 HomeController.cs_5 HomeController.cs_6 INSTALL_RAVENDB Index.cshtml Index.cshtml_4 Index.cshtml_5 Index.cshtml_6 Index.htm Index.htm_2 MessageForwarded.cs Messages.cs Messages.cs_2 NuGet.Config NuGet.Config_10 NuGet.Config_6 NuGet.Config_7 NuGet.Config_8 NuGet.Config_9 NuGet.exe NuGet.exe_10 NuGet.exe_6 NuGet.exe_7 NuGet.exe_8 NuGet.exe_9 OrderCancelledHandler.cs OrderCancelledHandler.cs_4 OrderCancelledHandler.cs_5 OrderCancelledHandler.cs_6 OrderPlaced.cs Orders.Handler.Worker2.csproj ProvisionDownloadRequest.cs ProvisionDownloadRequest.cs_4 ProvisionDownloadRequest.cs_5 ProvisionDownloadRequest.cs_6 PubSub.sln RequestResponse.sln ScaleOut.sln VideoStore.ActiveMQ.sln VideoStore.Messages.csproj VideoStore.Messages.csproj_4 VideoStore.Messages.csproj_5 VideoStore.Messages.csproj_6 VideoStore.Msmq.sln VideoStore.RabbitMQ.sln VideoStore.SqlServer.sln Web.config Web.config_4 Web.config_5 Web.config_6 _Layout.cshtml _Layout.cshtml_4 _Layout.cshtml_5 _Layout.cshtml_6 angular.min.js angular.min.js_4 angular.min.js_5 angular.min.js_6 bootstrapresponsive.min.css bootstrapresponsive.min.css_4 bootstrapresponsive.min.css_5 bootstrapresponsive.min.css_6 glyphiconshalflingswhite.png glyphiconshalflingswhite.png_4 glyphiconshalflingswhite.png_5 glyphiconshalflingswhite.png_6 jquery1.7.1.min.js jquery1.7.1.min.js_2"/>
@@ -1061,9 +1059,6 @@
     <ROW Property="BINARIES_SH" Value="create"/>
     <ROW Property="INSTALL_RAVENDB" Value="ImageCheckBox"/>
   </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.msicomp.MsiConditionComponent">
-    <ROW Feature_="ManagementPack" Level="1" Condition="AI_SERVICE_STATE=&quot;Not Found&quot;" Options="1"/>
-  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
     <ROW Dialog_="AdminBrowseDlg" Control="DirectoryCombo" Type="DirectoryCombo" X="68" Y="131" Width="209" Height="16" Attributes="393227" Property="TARGETDIR" Order="800" MsiKey="AdminBrowseDlg#DirectoryCombo"/>
     <ROW Dialog_="AdminBrowseDlg" Control="Up" Type="PushButton" X="285" Y="131" Width="19" Height="19" Attributes="3670019" Text="[UpDirIcon]" Help="Up One Level|" Order="900" HelpLocId="Control.Help.BrowseDlg#Up" MsiKey="AdminBrowseDlg#Up"/>
@@ -1096,9 +1091,7 @@
     <ROW Dialog_="CustomSelectionDialog" Control="AdvInst" Type="Text" X="5" Y="388" Width="74" Height="11" Attributes="65539" Text="Advanced Installer" TextStyle="[BrandingStyle]" Order="600"/>
     <ROW Dialog_="CustomSelectionDialog" Control="ItemDescription" Type="Text" X="17" Y="266" Width="312" Height="50" Attributes="65539" Text="Multiline description of the currently selected item." Order="700" TextLocId="Control.Text.CustomizeDlg#ItemDescription"/>
     <ROW Dialog_="CustomSelectionDialog" Control="ProductLogo" Type="Bitmap" X="17" Y="28" Width="257" Height="63" Attributes="1" Text="[AppLogoIcon]" Order="800"/>
-    <ROW Dialog_="CustomSelectionDialog" Control="Edit_1" Type="Edit" X="169" Y="323" Width="77" Height="18" Attributes="19" Property="PORT_VAL.CB8171C5_FE21_41EE_BC42_72123C0AD0F7" Text="{260}" Order="900"/>
-    <ROW Dialog_="CustomSelectionDialog" Control="Text_2" Type="Text" X="17" Y="323" Width="146" Height="18" Attributes="65539" Property="TEXT_1_PROP_2" Text="Management Service Port:" Order="1000"/>
-    <ROW Dialog_="CustomSelectionDialog" Control="QuickSelectionTree_1" Type="QuickSelectionTree" X="17" Y="123" Width="312" Height="143" Attributes="3" Property="QUICKSELECTIONTREE_1_PROP" Text="QuickSelectionTree" Order="1100" ExtType="QuickSelectionTree"/>
+    <ROW Dialog_="CustomSelectionDialog" Control="QuickSelectionTree_1" Type="QuickSelectionTree" X="17" Y="123" Width="312" Height="143" Attributes="3" Property="QUICKSELECTIONTREE_1_PROP" Text="QuickSelectionTree" Order="900" ExtType="QuickSelectionTree"/>
     <ROW Dialog_="CustomizeDlg" Control="CustomizeDlgDialogInitializer" Type="DialogInitializer" X="0" Y="0" Width="0" Height="0" Attributes="0" Order="-1" TextLocId="-" HelpLocId="-" ExtDataLocId="-"/>
     <ROW Dialog_="CustomizeDlg" Control="Bitmap" Type="Bitmap" X="0" Y="0" Width="345" Height="400" Attributes="1" Text="[Background]" Order="200" MsiKey="CustomizeDlg#Bitmap"/>
     <ROW Dialog_="CustomizeDlg" Control="QuickSelectionTree" Type="QuickSelectionTree" X="17" Y="141" Width="310" Height="102" Attributes="3" Property="CUSTOMIZEDLGQUICKSELECTIONTREE_1_PROP" Text="Control.Text.CustomizeDlg#QuickSelectionTree" Order="300" TextLocId="Control.Text.CustomizeDlg#QuickSelectionTree" MsiKey="CustomizeDlg#QuickSelectionTree" ExtType="QuickSelectionTree"/>
@@ -1339,7 +1332,7 @@
     <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH_ORIGINAL" Target="[AI_SETUPEXEPATH]"/>
     <ROW Action="AI_ChooseTextStyles" Type="1" Source="aicustact.dll" Target="ChooseTextStyles"/>
     <ROW Action="AI_DATA_SETTER" Type="51" Source="AI_ExtractFiles" Target="[AI_SETUPEXEPATH]"/>
-    <ROW Action="AI_DATA_SETTER_1" Type="51" Source="CustomActionData" Target="ServiceBus.Management"/>
+    <ROW Action="AI_DATA_SETTER_2" Type="51" Source="InstallRavenDb" Target="[RAVEN_PORT]"/>
     <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
     <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
     <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
@@ -1362,17 +1355,15 @@
     <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
     <ROW Action="Check_Internet_Connection" Type="1" Source="aicustact.dll_1" Target="ActiveInternetConnection"/>
     <ROW Action="CollectTroubleshootInfo" Type="51" Source="TRB_INFO_REG_VALUE" Target="1"/>
-    <ROW Action="DetectService" Type="65" Source="aicustact.dll" Target="DetectService" Options="3" AdditionalSeq="AI_DATA_SETTER_1"/>
     <ROW Action="GetTrialDate" Type="1" Source="Particular.CustomActions.CA.dll" Target="GetTrialStartDate"/>
     <ROW Action="InstallDtc" Type="1025" Source="Particular.CustomActions.CA.dll" Target="InstallDtc"/>
     <ROW Action="InstallMsmq" Type="1025" Source="Particular.CustomActions.CA.dll" Target="InstallMsmq"/>
     <ROW Action="InstallPerformanceCounters" Type="1025" Source="Particular.CustomActions.CA.dll" Target="InstallPerformanceCounters"/>
-    <ROW Action="InstallRavenDb" Type="1025" Source="Particular.CustomActions.CA.dll" Target="InstallRavenDb"/>
-    <ROW Action="Launch_Online_URL" Type="194" Source="viewer.exe" Target="https://github.com/Particular/NServiceBus/releases/tag/[ProductVersion]" Options="1"/>
+    <ROW Action="InstallRavenDb" Type="1025" Source="Particular.CustomActions.CA.dll" Target="InstallRavenDb" AdditionalSeq="AI_DATA_SETTER_2"/>
+    <ROW Action="Launch_Online_URL" Type="194" Source="viewer.exe" Target="http://www.particular.net/Installation-completed?installer=NServiceBus" Options="1"/>
     <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[ProgramFilesFolder]Particular Software\[ProductName]\v[MY_VERSION]"/>
     <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]" MultiBuildTarget="DefaultBuild:[ProgramMenuFolder]Particular Software\[ProductName]\v[MY_VERSION]"/>
     <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
-    <ROW Action="UpdateFeaturesInstallStates" Type="1" Source="aicustact.dll" Target="UpdateFeatureStates" Options="1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiDialogComponent">
     <ROW Dialog="ConnectionDetailsDialog" HCentering="50" VCentering="50" Width="345" Height="400" Attributes="3" Title="[ProductName] [Setup]" Control_Default="Next" Control_Cancel="Cancel" TitleLocId="Dialog.TemplateDlg"/>
@@ -1389,6 +1380,10 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
     <ROW Name="NServiceBus.exe" SourcePath="res\NServiceBus.ico" Index="0"/>
   </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIniFileComponent">
+    <ROW IniFile="URL" FileName="Releas~1.url|Release notes.url" DirProperty="SHORTCUTDIR" Section="InternetShortcut" Key="URL" Value="https://github.com/Particular/NServiceBus/releases/tag/[ProductVersion]" Action="0" Component_="NServiceBus.dll"/>
+    <ROW IniFile="WorkingDirectory" FileName="Releas~1.url|Release notes.url" DirProperty="SHORTCUTDIR" Section="InternetShortcut" Key="WorkingDirectory" Value="[SHORTCUTDIR]" Action="0" Component_="NServiceBus.dll"/>
+  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
     <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1502"/>
     <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
@@ -1401,9 +1396,9 @@
     <ROW Action="Launch_Online_URL" Condition="( NOT Installed ) AND ( AI_INTERNET_CONNECTION=&quot;AI_INET_CON_SUCCESS&quot; )" Sequence="6594"/>
     <ROW Action="CollectTroubleshootInfo" Condition="( NOT Installed ) AND ( TB_INFO )" Sequence="203"/>
     <ROW Action="InstallPerformanceCounters" Condition="( NOT Installed ) AND ( ABC )" Sequence="1601"/>
-    <ROW Action="InstallRavenDb" Condition="( ( NOT Installed ) OR ( Installed AND REMOVE &lt;&gt; &quot;ALL&quot; AND AI_INSTALL_MODE &lt;&gt; &quot;Remove&quot; ) ) AND ( INSTALL_RAVENDB )" Sequence="1602"/>
-    <ROW Action="InstallDtc" Condition="( ( NOT Installed ) OR ( Installed AND REMOVE &lt;&gt; &quot;ALL&quot; AND AI_INSTALL_MODE &lt;&gt; &quot;Remove&quot; ) ) AND ( ((&amp;DTC = 3) AND NOT (!DTC = 3)) )" Sequence="1603"/>
-    <ROW Action="InstallMsmq" Condition="( ( NOT Installed ) OR ( Installed AND REMOVE &lt;&gt; &quot;ALL&quot; AND AI_INSTALL_MODE &lt;&gt; &quot;Remove&quot; ) ) AND ( ((&amp;MSMQ = 3) AND NOT (!MSMQ = 3)) )" Sequence="1604"/>
+    <ROW Action="InstallRavenDb" Condition="( ( NOT Installed ) OR ( Installed AND REMOVE &lt;&gt; &quot;ALL&quot; AND AI_INSTALL_MODE &lt;&gt; &quot;Remove&quot; ) ) AND ( INSTALL_RAVENDB )" Sequence="1603"/>
+    <ROW Action="InstallDtc" Condition="( ( NOT Installed ) OR ( Installed AND REMOVE &lt;&gt; &quot;ALL&quot; AND AI_INSTALL_MODE &lt;&gt; &quot;Remove&quot; ) ) AND ( ((&amp;DTC = 3) AND NOT (!DTC = 3)) )" Sequence="1604"/>
+    <ROW Action="InstallMsmq" Condition="( ( NOT Installed ) OR ( Installed AND REMOVE &lt;&gt; &quot;ALL&quot; AND AI_INSTALL_MODE &lt;&gt; &quot;Remove&quot; ) ) AND ( ((&amp;MSMQ = 3) AND NOT (!MSMQ = 3)) )" Sequence="1605"/>
     <ROW Action="AI_AppSearchEx" Sequence="102"/>
     <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="201"/>
     <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99" Builds="DefaultBuild"/>
@@ -1420,6 +1415,7 @@
     <ROW Action="AI_EstimateExtractFiles" Sequence="3999" Builds="DefaultBuild"/>
     <ROW Action="GetTrialDate" Condition="( ( NOT Installed ) OR ( Installed AND REMOVE &lt;&gt; &quot;ALL&quot; AND AI_INSTALL_MODE &lt;&gt; &quot;Remove&quot; ) )" Sequence="202"/>
     <ROW Action="AI_AiRemoveFilesRollback" Sequence="3099"/>
+    <ROW Action="AI_DATA_SETTER_2" Condition="( ( NOT Installed ) OR ( Installed AND REMOVE &lt;&gt; &quot;ALL&quot; AND AI_INSTALL_MODE &lt;&gt; &quot;Remove&quot; ) ) AND ( INSTALL_RAVENDB )" Sequence="1602"/>
     <ROW Action="AI_AiRemoveFilesImmediate" Sequence="3499"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
@@ -1431,9 +1427,6 @@
     <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99"/>
     <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="102"/>
     <ROW Action="ExecuteAction" Sequence="1298" SeqType="0" MsiKey="ExecuteAction"/>
-    <ROW Action="UpdateFeaturesInstallStates" Condition="( NOT Installed )" Sequence="1279"/>
-    <ROW Action="DetectService" Condition="( NOT Installed )" Sequence="202"/>
-    <ROW Action="AI_DATA_SETTER_1" Condition="( NOT Installed )" Sequence="201"/>
     <ROW Action="AI_AppSearchEx" Sequence="101"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
@@ -1470,7 +1463,6 @@
     <ROW Registry="ModifyPath" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="ModifyPath" Value="[AI_UNINSTALLER] /I [ProductCode]" Component_="AI_CustomARPName"/>
     <ROW Registry="NoRepair" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="NoRepair" Value="#1" Component_="AI_CustomARPName"/>
     <ROW Registry="Path" Root="2" Key="Software\ParticularSoftware\ServiceBus\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
-    <ROW Registry="Port" Root="1" Key="Software\ParticularSoftware\NServicebus" Name="Port" Value="#[PORT_VAL.CB8171C5_FE21_41EE_BC42_72123C0AD0F7]" Component_="Port"/>
     <ROW Registry="Publisher" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Publisher" Value="[Manufacturer]" Component_="AI_CustomARPName"/>
     <ROW Registry="Samples_SH" Root="2" Key="Software\ParticularSoftware\ServiceBus\[ProductName]" Name="Samples_SH" Value="[SAMPLES_SH]" Component_="Samples_SH"/>
     <ROW Registry="ServiceBus_1" Root="2" Key="Software\[X64_REG]\ServiceBus" Name="+" Component_="ServiceBus"/>
@@ -1508,5 +1500,10 @@
   <COMPONENT cid="caphyon.advinst.msicomp.PreReqSearchComponent">
     <ROW SearchKey="_" SearchType="3" SearchString="{EFA58615-CE26-4FF0-800E-12444FDF9FA2}" Order="1" Property="BETA_40"/>
     <ROW SearchKey="__1" SearchType="3" SearchString="{2F8F8010-0D1E-430C-B14F-A026AFEAC4E2}" Order="2" Property="BETA_40_1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.SynchronizedFolderComponent">
+    <ROW Directory_="Binaries_Dir" SourcePath="..\Release\binaries" Feature="NServiceBus" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store|dummy.md" ExcludeFlags="6"/>
+    <ROW Directory_="Samples_Dir" SourcePath="..\Release\samples" Feature="Samples" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store|dummy.md" ExcludeFlags="6"/>
+    <ROW Directory_="Tools_Dir" SourcePath="..\Release\tools" Feature="Tools" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store|dummy.md" ExcludeFlags="6"/>
   </COMPONENT>
 </DOCUMENT>
