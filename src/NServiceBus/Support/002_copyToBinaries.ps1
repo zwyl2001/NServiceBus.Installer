@@ -1,65 +1,50 @@
 ﻿# cls
+$rootFolder = (Resolve-Path '..\..\').Path
 
-$packagesFolder = Resolve-Path '..\..\packages'
+$packagesFolder = $rootFolder + '\packages'
 
-$binariesFolder = Resolve-Path '..\..\Release\binaries'
+$binariesFolder = $rootFolder + '\Release\Binaries'
 
-$toolsFolder = Resolve-Path '..\..\Release\Tools'
-
-$includeFileList = "*.exe","*.pdb","*.xml","*.dll", "*.config"
-
-$excluedFileList = "*Apache.*","Microsoft.*", "Ionic.*", "Dummy.md"
-
-$excludeSubDirectory = "$packagesFolder\Fody", "$packagesFolder\GitFlowVersion.Fody", "$packagesFolder\GitFlowVersionTask", "$packagesFolder\log4net", "$packagesFolder\NServiceBus.Host32", "$packagesFolder\NServiceBus.Autofac", "$packagesFolder\NServiceBus.CastleWindsor", "$packagesFolder\NServiceBus.Ninject", "$packagesFolder\NServiceBus.Spring", "$packagesFolder\NServiceBus.StructureMap", "$packagesFolder\NServiceBus.Unity", "$packagesFolder\NServiceBus.Tools", "$packagesFolder\Particular.CustomActions"
+$toolsFolder = $rootFolder + '\Release\Tools'
 
 Write-Host("Copying binaries and tools...")
 
-$files = Get-ChildItem $packagesFolder -Recurse -Include $includeFileList -Exclude $excluedFileList
+if(!(Test-Path "$binariesFolder")){ md "$binariesFolder";}
 
-foreach ($file in $files)
-{
-$copy = 1
-
-    foreach($dir in $excludeSubDirectory.Split())
-    {
-        if ($file.DirectoryName.StartsWith($dir, [StringComparison]::InvariantCultureIgnoreCase ))
-        {
-            $copy = 0
-        }
-    }
-
-    if($copy -eq 1)
-    {
-        Write-Host("Copying:$file to $binariesFolder")
-
-        Copy-Item $file -Destination $binariesFolder
-    }
-}
+Copy-Item "$packagesFolder\NServiceBus\lib\net40\*.*" -Destination $binariesFolder
+Copy-Item "$packagesFolder\NServiceBus.ActiveMQ\lib\net40\*.*" -Destination $binariesFolder
+Copy-Item "$packagesFolder\NServiceBus.Azure\lib\net40\*.*" -Destination $binariesFolder
+Copy-Item "$packagesFolder\NServiceBus.Host\lib\net40\*.*" -Destination $binariesFolder
+Copy-Item "$packagesFolder\NServiceBus.Host32\lib\net40\*.*" -Destination $binariesFolder
+Copy-Item "$packagesFolder\NServiceBus.Hosting.Azure\lib\net40\*.*" -Destination $binariesFolder
+Copy-Item "$packagesFolder\NServiceBus.Hosting.Azure.HostProcess\lib\net40\*.*" -Destination $binariesFolder
+Copy-Item "$packagesFolder\NServiceBus.Interfaces\lib\net40\*.*" -Destination $binariesFolder
+Copy-Item "$packagesFolder\NServiceBus.NHibernate\lib\net40\*.*" -Destination $binariesFolder
+Copy-Item "$packagesFolder\NServiceBus.Notifications\lib\net40\*.*" -Destination $binariesFolder
+Copy-Item "$packagesFolder\NServiceBus.RabbitMQ\lib\net40\*.*" -Destination $binariesFolder
+Copy-Item "$packagesFolder\NServiceBus.SqlServer\lib\net40\*.*" -Destination $binariesFolder
+Copy-Item "$packagesFolder\NServiceBus.Testing\lib\net40\*.*" -Destination $binariesFolder
+Copy-Item "$packagesFolder\NServiceBus.Timeout.Hosting.Azure\lib\net40\*.*" -Destination $binariesFolder
+Copy-Item "$packagesFolder\NServiceBus\tools\*.*" -Exclude *.ps1 -Destination $binariesFolder
 
 #containers
 
 Write-Host("Copying containers...")
 
-# rename to make samples work:
-Rename-Item "$packagesFolder\NServiceBus.Autofac" "$packagesFolder\autofac"
-Rename-Item "$packagesFolder\NServiceBus.CastleWindsor" "$packagesFolder\castle"
-Rename-Item "$packagesFolder\NServiceBus.Ninject" "$packagesFolder\ninject"
-Rename-Item "$packagesFolder\NServiceBus.Spring" "$packagesFolder\spring"
-Rename-Item "$packagesFolder\NServiceBus.StructureMap" "$packagesFolder\structuremap"
-Rename-Item "$packagesFolder\NServiceBus.Unity" "$packagesFolder\unity"
+if(!(Test-Path "$binariesFolder\containers")){ md "$binariesFolder\containers";}
+if(!(Test-Path "$binariesFolder\containers\autofac")){ md "$binariesFolder\containers\autofac";}
+if(!(Test-Path "$binariesFolder\containers\castle")){ md "$binariesFolder\containers\castle";}
+if(!(Test-Path "$binariesFolder\containers\ninject")){ md "$binariesFolder\containers\ninject";}
+if(!(Test-Path "$binariesFolder\containers\spring")){ md "$binariesFolder\containers\spring";}
+if(!(Test-Path "$binariesFolder\containers\structuremap")){ md "$binariesFolder\containers\structuremap";}
+if(!(Test-Path "$binariesFolder\containers\unity")){ md "$binariesFolder\containers\unity";}
 
-$includeSubDirectory = "$packagesFolder\autofac", "$packagesFolder\castle", "$packagesFolder\ninject", "$packagesFolder\spring", "$packagesFolder\structuremap", "$packagesFolder\unity"
-
-foreach($container in $includeSubDirectory.Split())
-{
-    $containerDirName = Split-Path($container) -Leaf
-
-    Write-Host("Copying:$container\lib\net40\ to $binariesFolder\containers\$containerDirName\")
-
-    if(!(Test-Path "$binariesFolder\containers\$containerDirName\")){ md "$binariesFolder\containers\$containerDirName\";}
-
-    Copy-Item "$container\lib\net40\*" -Recurse -Destination "$binariesFolder\containers\$containerDirName\" -Force
-}
+Copy-Item "$packagesFolder\NServiceBus.Autofac\lib\net40\*.*" "$binariesFolder\containers\autofac"
+Copy-Item "$packagesFolder\NServiceBus.CastleWindsor\lib\net40\*.*" "$binariesFolder\containers\castle"
+Copy-Item "$packagesFolder\NServiceBus.Ninject\lib\net40\*.*" "$binariesFolder\containers\ninject"
+Copy-Item "$packagesFolder\NServiceBus.Spring\lib\net40\*.*" "$binariesFolder\containers\spring"
+Copy-Item "$packagesFolder\NServiceBus.StructureMap\lib\net40\*.*" "$binariesFolder\containers\structuremap"
+Copy-Item "$packagesFolder\NServiceBus.Unity\lib\net40\*.*" "$binariesFolder\containers\unity"
 
 #log4net
 
@@ -67,16 +52,10 @@ $log4NetDit = "$packagesFolder\log4net\lib\net40-full\*"
 
 Copy-Item $log4NetDit -Destination $binariesFolder
 
-#NServiceBus.Host32.exe
-
-if(!(Test-Path $binariesFolder\NServiceBus.Host32)){ md $binariesFolder\NServiceBus.Host32;}
-
-Get-ChildItem "$packagesFolder\NServiceBus.Host32\lib\net40\" -Recurse | % { Copy-Item $_.FullName -Destination "$binariesFolder\NServiceBus.Host32\$($_.BaseName + '32' + $_.Extension)"};
-
 #Tools
-Copy-item "$packagesFolder\NServiceBus.Tools\*" -Destination "$toolsFolder\"-Include $includeFileList -Force 
+if(!(Test-Path "$toolsFolder")){ md "$toolsFolder";}
 
-Copy-item "$packagesFolder\NServiceBus.Tools\LicenseInstaller\*" -Destination "$toolsFolder\LicenseInstaller\" -Include $includeFileList -Force
+Copy-item "$packagesFolder\NServiceBus.Tools\*" -Destination "$toolsFolder\"-Include $includeFileList -Force 
 
 Write-Host("Done copying binaries and tools")
 
@@ -85,6 +64,5 @@ $res_binaryFolder = Resolve-Path '..\..\NServiceBus\res-binary\'
 Write-Host("Copying Dependencies to $res_binaryFolder")
 
 Copy-Item "$packagesFolder\Particular.CustomActions\lib\net40\*" -Destination $res_binaryFolder -Recurse -force
-
 
 Write-Host("002_copyToBinaries done.")

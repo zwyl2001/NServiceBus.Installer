@@ -22,11 +22,11 @@ $AdvancedInstallerPath = Get-RegistryValue "HKLM:\SOFTWARE\Wow6432Node\Caphyon\A
 
 $script:AdvinstCLI = $AdvancedInstallerPath + "bin\x86\AdvancedInstaller.com"
 
-$archive = "Particular.NServiceBus-%GitFlowVersion.Version%" 
+$archive = "Particular.NServiceBus-4.1" 
 
-$stability = "%GitFlowVersion.Stability%"
+$stability = "Final"
 
-$preReleaseNameValue = "-%GitFlowVersion.Stability%%GitFlowVersion.PreReleaseNumber%"
+$preReleaseNameValue = "-Final00"
 
 if($stability -eq "Final") 
 {
@@ -37,13 +37,13 @@ else
    $preReleaseName = $preReleaseNameValue
 }
 
-$versionValue = "%GitFlowVersion.Major%.%GitFlowVersion.Minor%.%GitFlowVersion.Patch%"
+$versionValue = "4.1.0"
 
-$baseDir = "%teamcity.build.checkoutDir%"
+$baseDir = "."
 
-$setupProjectFile = "$baseDir\src\NServiceBus\NServiceBus.aip"
+$setupProjectFile = "C:\Projects\NServiceBus.Installer\src\NServiceBus\NServiceBus.aip"
 
-$outputDir = "$baseDir\src\NServiceBus\Output Package"
+$outputDir = "C:\Projects\NServiceBus.Installer\src\NServiceBus\Output Package"
 
 
 # edit Advanced Installer Project   
@@ -54,6 +54,8 @@ exec { &$script:AdvinstCLI /edit $setupProjectFile /SetPackageName "$archive.exe
 exec { &$script:AdvinstCLI /edit $setupProjectFile /SetOutputLocation -buildname DefaultBuild -path "$outputDir" }
 
 exec { &$script:AdvinstCLI /edit $setupProjectFile /SetProperty OPT_PRERELEASE_NAME="$preReleaseName" }
+
+exec { &$script:AdvinstCLI /edit $setupProjectFile /SetProperty MY_VERSION="4.1" }
     
 # Build setup with Advanced Installer 
 exec { &$script:AdvinstCLI /rebuild $setupProjectFile }
