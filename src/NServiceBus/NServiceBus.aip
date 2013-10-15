@@ -1357,7 +1357,7 @@
     <ROW Action="CollectTroubleshootInfo" Type="51" Source="TRB_INFO_REG_VALUE" Target="1"/>
     <ROW Action="GetTrialDate" Type="1" Source="Particular.CustomActions.CA.dll" Target="GetTrialStartDate"/>
     <ROW Action="InstallDtc" Type="1025" Source="Particular.CustomActions.CA.dll" Target="InstallDtc"/>
-    <ROW Action="InstallMsmq" Type="1025" Source="Particular.CustomActions.CA.dll" Target="InstallMsmq"/>
+    <ROW Action="InstallMsmq" Type="3073" Source="Particular.CustomActions.CA.dll" Target="InstallMsmq"/>
     <ROW Action="InstallPerformanceCounters" Type="1025" Source="Particular.CustomActions.CA.dll" Target="InstallPerformanceCounters"/>
     <ROW Action="InstallRavenDb" Type="1025" Source="Particular.CustomActions.CA.dll" Target="InstallRavenDb" AdditionalSeq="AI_DATA_SETTER_2"/>
     <ROW Action="Launch_Online_URL" Type="194" Source="viewer.exe" Target="http://www.particular.net/Installation-completed?installer=NServiceBus&amp;version=[ProductVersion]&amp;method=msi" Options="1"/>
