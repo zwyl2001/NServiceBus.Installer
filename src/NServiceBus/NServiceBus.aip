@@ -1368,7 +1368,7 @@
     <ROW Action="InstallMsmq" Type="1025" Source="Particular.CustomActions.CA.dll" Target="InstallMsmq"/>
     <ROW Action="InstallPerformanceCounters" Type="1025" Source="Particular.CustomActions.CA.dll" Target="InstallPerformanceCounters"/>
     <ROW Action="InstallRavenDb" Type="1025" Source="Particular.CustomActions.CA.dll" Target="InstallRavenDb"/>
-    <ROW Action="Launch_Online_URL" Type="194" Source="viewer.exe" Target="http://www.particular.net/Installation-completed?installer=NServiceBus" Options="1"/>
+    <ROW Action="Launch_Online_URL" Type="194" Source="viewer.exe" Target="https://github.com/Particular/NServiceBus/releases/tag/[ProductVersion]" Options="1"/>
     <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[ProgramFilesFolder]Particular Software\[ProductName]\v[MY_VERSION]"/>
     <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]" MultiBuildTarget="DefaultBuild:[ProgramMenuFolder]Particular Software\[ProductName]\v[MY_VERSION]"/>
     <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
@@ -1508,10 +1508,5 @@
   <COMPONENT cid="caphyon.advinst.msicomp.PreReqSearchComponent">
     <ROW SearchKey="_" SearchType="3" SearchString="{EFA58615-CE26-4FF0-800E-12444FDF9FA2}" Order="1" Property="BETA_40"/>
     <ROW SearchKey="__1" SearchType="3" SearchString="{2F8F8010-0D1E-430C-B14F-A026AFEAC4E2}" Order="2" Property="BETA_40_1"/>
-  </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.msicomp.SynchronizedFolderComponent">
-    <ROW Directory_="Binaries_Dir" SourcePath="..\Release\binaries" Feature="NServiceBus" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store|dummy.md" ExcludeFlags="6"/>
-    <ROW Directory_="Samples_Dir" SourcePath="..\Release\samples" Feature="Samples" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store|dummy.md" ExcludeFlags="6"/>
-    <ROW Directory_="Tools_Dir" SourcePath="..\Release\tools" Feature="Tools" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store|dummy.md" ExcludeFlags="6"/>
   </COMPONENT>
 </DOCUMENT>
