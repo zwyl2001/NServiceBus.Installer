@@ -1,4 +1,4 @@
-﻿# cls
+# cls
 $rootFolder = (Resolve-Path '..\..\').Path
 
 $packagesFolder = $rootFolder + '\packages'
