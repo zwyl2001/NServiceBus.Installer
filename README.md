@@ -1,4 +1,4 @@
 NServiceBus.Installer
 =====================
 
-Installer for NServiceBus
+Installer for NServiceBus and subcomponents
