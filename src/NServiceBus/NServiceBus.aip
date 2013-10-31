@@ -1078,7 +1078,7 @@
     <ROW Property="TRANSPORT_TYPE" Order="7" Value="WebSphereMQ" Text="WebSphereMQ"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiConditionComponent">
-    <ROW Feature_="ServiceControl" Level="1" Condition="AI_SERVICE_STATE=&quot;Not Found&quot; AND CUSTOM_INSTALL_MODE" Options="1"/>
+    <ROW Feature_="ServiceControl" Level="1" Condition="AI_SERVICE_STATE=&quot;Not Found&quot;" Options="1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
     <ROW Dialog_="AdminBrowseDlg" Control="DirectoryCombo" Type="DirectoryCombo" X="68" Y="131" Width="209" Height="16" Attributes="393227" Property="TARGETDIR" Order="800" MsiKey="AdminBrowseDlg#DirectoryCombo"/>
@@ -1319,10 +1319,10 @@
     <ROW Dialog_="ConnectionDetailsDialog" Control_="Back" Event="NewDialog" Argument="InstallDlg" Condition="AI_INSTALL" Ordering="1"/>
     <ROW Dialog_="ConnectionDetailsDialog" Control_="Back" Event="NewDialog" Argument="LicenseAgreementDlg" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="2"/>
     <ROW Dialog_="SpawnDialog" Control_="Yes" Event="EndDialog" Argument="Return" Condition="1" Ordering="100"/>
-    <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="6"/>
-    <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="SpawnDialog" Argument="OutOfRbDiskDlg" Condition="AI_INSTALL AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND (PROMPTROLLBACKCOST=&quot;P&quot; OR NOT PROMPTROLLBACKCOST)" Ordering="7"/>
-    <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="EnableRollback" Argument="False" Condition="AI_INSTALL AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND PROMPTROLLBACKCOST=&quot;D&quot;" Ordering="8"/>
-    <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="SpawnDialog" Argument="OutOfDiskDlg" Condition="AI_INSTALL AND ( (OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 1) OR (OutOfDiskSpace = 1 AND PROMPTROLLBACKCOST=&quot;F&quot;) )" Ordering="9"/>
+    <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="8"/>
+    <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="SpawnDialog" Argument="OutOfRbDiskDlg" Condition="AI_INSTALL AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND (PROMPTROLLBACKCOST=&quot;P&quot; OR NOT PROMPTROLLBACKCOST)" Ordering="9"/>
+    <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="EnableRollback" Argument="False" Condition="AI_INSTALL AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND PROMPTROLLBACKCOST=&quot;D&quot;" Ordering="10"/>
+    <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="SpawnDialog" Argument="OutOfDiskDlg" Condition="AI_INSTALL AND ( (OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 1) OR (OutOfDiskSpace = 1 AND PROMPTROLLBACKCOST=&quot;F&quot;) )" Ordering="11"/>
     <ROW Dialog_="LicenseAgreementDlg" Control_="AgreeInstall" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="102"/>
     <ROW Dialog_="LicenseAgreementDlg" Control_="AgreeInstall" Event="SpawnDialog" Argument="OutOfRbDiskDlg" Condition="AI_INSTALL AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND (PROMPTROLLBACKCOST=&quot;P&quot; OR NOT PROMPTROLLBACKCOST)" Ordering="103"/>
     <ROW Dialog_="LicenseAgreementDlg" Control_="AgreeInstall" Event="EnableRollback" Argument="False" Condition="AI_INSTALL AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND PROMPTROLLBACKCOST=&quot;D&quot;" Ordering="104"/>
@@ -1362,7 +1362,9 @@
     <ROW Dialog_="CustomSelectionDialog" Control_="Back" Event="NewDialog" Argument="ServiceControlDialog" Condition="AI_INSTALL AND AI_SERVICE_STATE=&quot;Not Found&quot;" Ordering="2"/>
     <ROW Dialog_="ServiceControlDialog" Control_="Next" Event="NewDialog" Argument="CustomSelectionDialog" Condition="AI_INSTALL AND AI_SERVICE_STATE=&quot;Not Found&quot;" Ordering="1"/>
     <ROW Dialog_="ServiceControlDialog" Control_="Back" Event="NewDialog" Argument="RavenDBDialog" Condition="AI_INSTALL AND AI_SERVICE_STATE=&quot;Not Found&quot;" Ordering="1"/>
-    <ROW Dialog_="InstallDlg" Control_="Next" Event="[CUSTOM_INSTALL_MODE]" Argument="set" Condition="AI_INSTALL" Ordering="99"/>
+    <ROW Dialog_="InstallDlg" Control_="InstallDlgDialogInitializer" Event="[INST_NAME]" Argument="ServiceControl@[ComputerName]" Condition="AI_INSTALL" Ordering="98"/>
+    <ROW Dialog_="InstallDlg" Control_="InstallDlgDialogInitializer" Event="[INST_DESCRIPTION]" Argument="ServiceControl on [ComputerName]" Condition="AI_INSTALL" Ordering="99"/>
+    <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="[TRANSPORT_TYPE]" Argument="MSMQ" Condition="AI_INSTALL" Ordering="7"/>
     <ATTRIBUTE name="DeletedRows" value="ExitDialog#ReadmeButton#[AiEventsControl]#ViewReadmeCheckBox#1@InstallDlg#Browse#SpawnDialog#BrowseDlg#1@ExitDialog#RunButton#[AiEventsControl]#LaunchProdCheckBox#1@InstallDlg#InstallButton#[AiEventsControl]#Next#1@InstallDlg#InstallButton#SetTargetPath#APPDIR#AI_INSTALL@InstallDlg#Browse#[_BrowseProperty]#APPDIR#1@LicenseAgreementDlg#AgreeInstall#[AiEventsControl]#Next#1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
@@ -1475,10 +1477,10 @@
     <ROW Action="GetTrialDate" Condition="( ( NOT Installed ) OR ( Installed AND REMOVE &lt;&gt; &quot;ALL&quot; AND AI_INSTALL_MODE &lt;&gt; &quot;Remove&quot; ) )" Sequence="202"/>
     <ROW Action="AI_AiRemoveFilesRollback" Sequence="3099"/>
     <ROW Action="AI_DATA_SETTER_2" Condition="( ( NOT Installed ) OR ( Installed AND REMOVE &lt;&gt; &quot;ALL&quot; AND AI_INSTALL_MODE &lt;&gt; &quot;Remove&quot; ) ) AND ( INSTALL_RAVENDB )" Sequence="1602"/>
-    <ROW Action="AI_AiRemoveFilesImmediate" Sequence="3499"/>
     <ROW Action="AI_ConfigureChainer" Condition="((UILevel = 2) OR (UILevel = 3)) AND (NOT UPGRADINGPRODUCTCODE)" Sequence="6591"/>
     <ROW Action="AI_LaunchChainer" Condition="AI_PREREQ_CHAINER AND (NOT UPGRADINGPRODUCTCODE)" Sequence="6592"/>
     <ROW Action="AI_VerifyPrereq" Sequence="1101"/>
+    <ROW Action="AI_AiRemoveFilesImmediate" Sequence="3499"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
     <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
