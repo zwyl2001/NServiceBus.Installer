@@ -1069,7 +1069,7 @@
     <ROW Property="INSTALL_RAVENDB" Value="ImageCheckBox"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiComboBoxComponent">
-    <ROW Property="TRANSPORT_TYPE" Order="1" Value="MSMQ" Text="MSMQ"/>
+    <ROW Property="TRANSPORT_TYPE" Order="1" Value="NServiceBus.Msmq, NServiceBus.Core" Text="MSMQ"/>
     <ROW Property="TRANSPORT_TYPE" Order="2" Value="SQL Server" Text="SQL Server"/>
     <ROW Property="TRANSPORT_TYPE" Order="3" Value="ActiveMQ" Text="ActiveMQ"/>
     <ROW Property="TRANSPORT_TYPE" Order="4" Value="RabbitMQ" Text="RabbitMQ"/>
@@ -1364,7 +1364,7 @@
     <ROW Dialog_="ServiceControlDialog" Control_="Back" Event="NewDialog" Argument="RavenDBDialog" Condition="AI_INSTALL AND AI_SERVICE_STATE=&quot;Not Found&quot;" Ordering="1"/>
     <ROW Dialog_="InstallDlg" Control_="InstallDlgDialogInitializer" Event="[INST_NAME]" Argument="ServiceControl@[ComputerName]" Condition="AI_INSTALL" Ordering="98"/>
     <ROW Dialog_="InstallDlg" Control_="InstallDlgDialogInitializer" Event="[INST_DESCRIPTION]" Argument="ServiceControl on [ComputerName]" Condition="AI_INSTALL" Ordering="99"/>
-    <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="[TRANSPORT_TYPE]" Argument="MSMQ" Condition="AI_INSTALL" Ordering="7"/>
+    <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="[TRANSPORT_TYPE]" Argument="NServiceBus.Msmq, NServiceBus.Core" Condition="AI_INSTALL" Ordering="7"/>
     <ATTRIBUTE name="DeletedRows" value="ExitDialog#ReadmeButton#[AiEventsControl]#ViewReadmeCheckBox#1@InstallDlg#Browse#SpawnDialog#BrowseDlg#1@ExitDialog#RunButton#[AiEventsControl]#LaunchProdCheckBox#1@InstallDlg#InstallButton#[AiEventsControl]#Next#1@InstallDlg#InstallButton#SetTargetPath#APPDIR#AI_INSTALL@InstallDlg#Browse#[_BrowseProperty]#APPDIR#1@LicenseAgreementDlg#AgreeInstall#[AiEventsControl]#Next#1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
