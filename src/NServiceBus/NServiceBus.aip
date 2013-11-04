@@ -33,6 +33,7 @@
     <ROW Property="SAMPLES_SH" Value="create" Type="4"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="TOOLS_SH" Value="create" Type="4"/>
+    <ROW Property="TRANSPORT_TYPE" Value="NServiceBus.Msmq, NServiceBus.Core" Type="4"/>
     <ROW Property="TRB_INFO_REG_VALUE" Value="0"/>
     <ROW Property="UpgradeCode" Value="{98DD0176-AFD4-4FAF-8EE7-D910B36FA048}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
