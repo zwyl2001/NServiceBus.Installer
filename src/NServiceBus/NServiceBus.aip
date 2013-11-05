@@ -33,7 +33,6 @@
     <ROW Property="SAMPLES_SH" Value="create" Type="4"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="TOOLS_SH" Value="create" Type="4"/>
-    <ROW Property="TRANSPORT_TYPE" Value="NServiceBus.Msmq, NServiceBus.Core" Type="4"/>
     <ROW Property="TRB_INFO_REG_VALUE" Value="0"/>
     <ROW Property="UpgradeCode" Value="{98DD0176-AFD4-4FAF-8EE7-D910B36FA048}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -404,7 +403,6 @@
     <ROW Component="Samples_SH" ComponentId="{4AF719F6-CF5D-48F7-986A-76FA298629F3}" Directory_="APPDIR" Attributes="4" Condition="SAMPLES_SH OR INSTALL_ALL_SHORTCUTS" KeyPath="Samples_SH"/>
     <ROW Component="ScaleOut.sln" ComponentId="{BB0E8960-B0FE-42DC-9B66-F889202C7238}" Directory_="ScaleOut_Dir" Attributes="0" KeyPath="ScaleOut.sln" Type="0"/>
     <ROW Component="ServiceBus" ComponentId="{BC64C14D-73A1-434D-A45D-C778F8AE166B}" Directory_="APPDIR" Attributes="260" KeyPath="ServiceBus_1"/>
-    <ROW Component="ServiceControl" ComponentId="{EE1B120D-3A46-4D9A-8ED8-86BFFD90208F}" Directory_="APPDIR" Attributes="4" KeyPath="ServiceControl" Options="2"/>
     <ROW Component="Tools_SH" ComponentId="{08B97540-1114-4BB7-9536-BA0F54E093C6}" Directory_="APPDIR" Attributes="4" Condition="TOOLS_SH OR INSTALL_ALL_SHORTCUTS" KeyPath="Tools_SH"/>
     <ROW Component="TrialStart" ComponentId="{7A967027-5397-4C23-8B1D-43E489AC01C0}" Directory_="APPDIR" Attributes="260" KeyPath="TrialStart"/>
     <ROW Component="UploadEndpointURL" ComponentId="{631A542D-7942-45E7-A065-811151AB9D1E}" Directory_="APPDIR" Attributes="4" KeyPath="UploadEndpointURL"/>
@@ -452,7 +450,6 @@
     <ROW Feature="NServiceBus" Title="NServiceBus" Description="NServiceBus main application" Display="3" Level="1" Directory_="APPDIR" Attributes="16" Components="Apache.NMS.ActiveMQ.dll AuditQueue BinariesSH ErrorQueue INSTALL_RAVENDB Ionic.Zip.dll Microsoft.WindowsAzure.Diagnostics.dll Microsoft.WindowsAzure.ServiceRuntime.dl NServiceBus.Azure.dll NServiceBus.Core.dll NServiceBus.Host.exe NServiceBus.Hosting.Azure.HostProcess.ex NServiceBus.Hosting.Azure.dll NServiceBus.NHibernate.dll NServiceBus.Notifications.dll NServiceBus.ObjectBuilder.Autofac.XML NServiceBus.ObjectBuilder.Autofac.dll NServiceBus.ObjectBuilder.CastleWindso_2 NServiceBus.ObjectBuilder.CastleWindsor. NServiceBus.ObjectBuilder.Ninject.XML NServiceBus.ObjectBuilder.Ninject.dll NServiceBus.ObjectBuilder.Spring.XML NServiceBus.ObjectBuilder.Spring.dll NServiceBus.ObjectBuilder.StructureMap.X NServiceBus.ObjectBuilder.StructureMap.d NServiceBus.ObjectBuilder.Unity.XML NServiceBus.ObjectBuilder.Unity.dll NServiceBus.PowerShell.dll NServiceBus.Testing.dll NServiceBus.Timeout.Hosting.Azure.dll NServiceBus.Transports.ActiveMQ.dll NServiceBus.Transports.RabbitMQ.dll NServiceBus.Transports.SQLServer.dll NServiceBus.dll ProductInformation SHORTCUTDIR Samples_SH Tools_SH UploadEndpointURL UsageDataCollectionApproved about_NServiceBus.help.txt log4net.dll"/>
     <ROW Feature="PrepMachine" Feature_Parent="NServiceBus" Title="Prepare My Machine" Description="Install Windows components used by some of NServiceBus features" Display="9" Level="1" Directory_="APPDIR" Attributes="0" Components="INSTALL_RAVENDB"/>
     <ROW Feature="Samples" Feature_Parent="NServiceBus" Title="Samples" Description="Install the NServiceBus samples directory" Display="5" Level="1" Directory_="APPDIR" Attributes="0" Components="AnotherEventMessageHandler.cs App.config App.config_29 App.config_30 App.config_31 App.config_32 App.config_33 App.config_34 App.config_35 App.config_36 App.config_37 App.config_38 App.config_39 App.config_40 App.config_41 App.config_42 App.config_43 App.config_44 App.config_45 App.config_46 App.config_47 App.config_48 App.config_49 App.config_50 App.config_51 App.config_52 App.config_53 App.config_54 App.config_55 App.config_56 Application.cs AssemblyInfo.cs AssemblyInfo.cs_44 AssemblyInfo.cs_45 AssemblyInfo.cs_46 AssemblyInfo.cs_47 AssemblyInfo.cs_48 AssemblyInfo.cs_49 AssemblyInfo.cs_50 AssemblyInfo.cs_51 AssemblyInfo.cs_52 AssemblyInfo.cs_53 AssemblyInfo.cs_54 AssemblyInfo.cs_55 AssemblyInfo.cs_56 AssemblyInfo.cs_57 AssemblyInfo.cs_58 AssemblyInfo.cs_59 AssemblyInfo.cs_60 AssemblyInfo.cs_61 AssemblyInfo.cs_62 AssemblyInfo.cs_63 AssemblyInfo.cs_64 AssemblyInfo.cs_65 AssemblyInfo.cs_66 AssemblyInfo.cs_67 AssemblyInfo.cs_68 AssemblyInfo.cs_69 AssemblyInfo.cs_70 AssemblyInfo.cs_71 AssemblyInfo.cs_72 AssemblyInfo.cs_73 AssemblyInfo.cs_74 AssemblyInfo.cs_75 AssemblyInfo.cs_76 AssemblyInfo.cs_77 AssemblyInfo.cs_78 AssemblyInfo.cs_79 AssemblyInfo.cs_80 AssemblyInfo.cs_81 AssemblyInfo.cs_82 AssemblyInfo.cs_83 AssemblyInfo.cs_84 AssemblyInfo.cs_85 AssemblyInfo.cs_86 AuditInspector.cs CancelOrder.cs CancelOrder.cs_4 CancelOrder.cs_5 CancelOrder.cs_6 ClientBecamePreferred.cs ClientBecamePreferred.cs_4 ClientBecamePreferred.cs_5 ClientBecamePreferred.cs_6 CustomHttpResponder.cs ErrorHandling.sln FilterConfig.cs FilterConfig.cs_4 FilterConfig.cs_5 FilterConfig.cs_6 Gateway.sln Global.asax Global.asax_4 Global.asax_5 Global.asax_6 Headquarter.Messages.csproj HomeController.cs HomeController.cs_4 HomeController.cs_5 HomeController.cs_6 INSTALL_RAVENDB Index.cshtml Index.cshtml_4 Index.cshtml_5 Index.cshtml_6 Index.htm Index.htm_2 MessageForwarded.cs Messages.cs Messages.cs_2 NuGet.Config NuGet.Config_10 NuGet.Config_6 NuGet.Config_7 NuGet.Config_8 NuGet.Config_9 NuGet.exe NuGet.exe_10 NuGet.exe_6 NuGet.exe_7 NuGet.exe_8 NuGet.exe_9 OrderCancelledHandler.cs OrderCancelledHandler.cs_4 OrderCancelledHandler.cs_5 OrderCancelledHandler.cs_6 OrderPlaced.cs Orders.Handler.Worker2.csproj ProvisionDownloadRequest.cs ProvisionDownloadRequest.cs_4 ProvisionDownloadRequest.cs_5 ProvisionDownloadRequest.cs_6 PubSub.sln RequestResponse.sln ScaleOut.sln VideoStore.ActiveMQ.sln VideoStore.Messages.csproj VideoStore.Messages.csproj_4 VideoStore.Messages.csproj_5 VideoStore.Messages.csproj_6 VideoStore.Msmq.sln VideoStore.RabbitMQ.sln VideoStore.SqlServer.sln Web.config Web.config_4 Web.config_5 Web.config_6 _Layout.cshtml _Layout.cshtml_4 _Layout.cshtml_5 _Layout.cshtml_6 angular.min.js angular.min.js_4 angular.min.js_5 angular.min.js_6 bootstrapresponsive.min.css bootstrapresponsive.min.css_4 bootstrapresponsive.min.css_5 bootstrapresponsive.min.css_6 glyphiconshalflingswhite.png glyphiconshalflingswhite.png_4 glyphiconshalflingswhite.png_5 glyphiconshalflingswhite.png_6 jquery1.7.1.min.js jquery1.7.1.min.js_2"/>
-    <ROW Feature="ServiceControl" Title="ServiceControl" Description="ServiceControl" Display="0" Level="32767" Attributes="0" Options="32" Components="ServiceControl"/>
     <ROW Feature="Tools" Feature_Parent="NServiceBus" Title="Tools" Description="Install the NServiceBus command-line and utilities directory" Display="3" Level="1" Directory_="APPDIR" Attributes="0" Components="AI_CustomARPName AI_ExePath AuditQueue_1 ErrorQueue_1 INSTALL_RAVENDB LICENSE.md_1 LicenseInstaller NServiceBus.Core.dll_2 NServiceBus.Core.xml NServiceBus.dll_2 ReturnToSourceQueue.exe ServiceBus TrialStart UploadEndpointURL_1 UsageDataCollectionApproved_1 X64_REG XsdGenerator.exe"/>
     <ATTRIBUTE name="CurrentFeature" value="Tools"/>
   </COMPONENT>
@@ -1029,16 +1026,10 @@
     <ROW Action="AI_AiRemoveFilesDeferred_Undoable" Description="Preparing files for removal" Template="Preparing file: [1]" DescriptionLocId="ActionText.Description.AI_AiRemoveFilesDeferred_Undoable" TemplateLocId="ActionText.Template.AI_AiRemoveFilesDeferred_Undoable"/>
     <ROW Action="AI_AiRemoveFilesImmediate" Description="Preparing files for removal" Template="Preparing file: [1]" DescriptionLocId="ActionText.Description.AI_AiRemoveFilesImmediate" TemplateLocId="ActionText.Template.AI_AiRemoveFilesImmediate"/>
     <ROW Action="AI_AiRemoveFilesRollback" Description="Restoring removed files" Template="Restoring file: [1]" DescriptionLocId="ActionText.Description.AI_AiRemoveFilesRollback" TemplateLocId="ActionText.Template.AI_AiRemoveFilesRollback"/>
-    <ROW Action="AI_ConfigureChainer" Description="ActionText.Description.AI_ConfigureChainer" DescriptionLocId="ActionText.Description.AI_ConfigureChainer"/>
     <ROW Action="AI_DeleteLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
     <ROW Action="AI_DeleteRLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
-    <ROW Action="AI_DownloadPrereq" Description="Downloading prerequisite software" Template="Downloading [1]{[2] completed}" DescriptionLocId="ActionText.Description.AI_DownloadPrereq" TemplateLocId="ActionText.Template.AI_DownloadPrereq"/>
     <ROW Action="AI_ExtractFiles" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
     <ROW Action="AI_ExtractLzma" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
-    <ROW Action="AI_ExtractPrereq" Description="Extracting prerequisite software" Template="Extracting [1]{[2] completed}" DescriptionLocId="ActionText.Description.AI_ExtractPrereq" TemplateLocId="ActionText.Template.AI_ExtractPrereq"/>
-    <ROW Action="AI_InstallPostPrerequisite" Description="Installing prerequisite software" Template="Installing [1]{[2] completed}" DescriptionLocId="ActionText.Description.AI_InstallPrerequisite" TemplateLocId="ActionText.Template.AI_InstallPrerequisite"/>
-    <ROW Action="AI_InstallPrerequisite" Description="Installing prerequisite software" Template="Installing [1]{[2] completed}" DescriptionLocId="ActionText.Description.AI_InstallPrerequisite" TemplateLocId="ActionText.Template.AI_InstallPrerequisite"/>
-    <ROW Action="AI_VerifyPrereq" Description="Verifying prerequisites" Template="[1] was not installed correctly." DescriptionLocId="ActionText.Description.AI_VerifyPrereq" TemplateLocId="ActionText.Template.AI_VerifyPrereq"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
     <ROW Property="AI_DOTNET40_SEARCH" Signature_="AI_DotNet40SearchSgn" Builds="DefaultBuild"/>
@@ -1057,7 +1048,6 @@
     <ROW Name="ResourceCleaner.dll" SourcePath="&lt;AI_CUSTACTS&gt;ResourceCleaner.dll"/>
     <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
     <ROW Name="aicustact.dll_1" SourcePath="res-binary\aicustact.dll"/>
-    <ROW Name="aipackagechainer.exe" SourcePath="&lt;AI_CUSTACTS&gt;aipackagechainer.exe"/>
     <ROW Name="checkbox.png" SourcePath="res\checkbox.png"/>
     <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
     <ROW Name="viewer.exe" SourcePath="&lt;AI_CUSTACTS&gt;viewer.exe"/>
@@ -1070,16 +1060,13 @@
     <ROW Property="INSTALL_RAVENDB" Value="ImageCheckBox"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiComboBoxComponent">
-    <ROW Property="TRANSPORT_TYPE" Order="1" Value="NServiceBus.Msmq, NServiceBus.Core" Text="MSMQ"/>
+    <ROW Property="TRANSPORT_TYPE" Order="1" Value="MSMQ" Text="MSMQ"/>
     <ROW Property="TRANSPORT_TYPE" Order="2" Value="SQL Server" Text="SQL Server"/>
     <ROW Property="TRANSPORT_TYPE" Order="3" Value="ActiveMQ" Text="ActiveMQ"/>
     <ROW Property="TRANSPORT_TYPE" Order="4" Value="RabbitMQ" Text="RabbitMQ"/>
     <ROW Property="TRANSPORT_TYPE" Order="5" Value="Windows Azure Queue" Text="Windows Azure Queue"/>
     <ROW Property="TRANSPORT_TYPE" Order="6" Value="Windows Azure Service Bus" Text="Windows Azure Service Bus"/>
     <ROW Property="TRANSPORT_TYPE" Order="7" Value="WebSphereMQ" Text="WebSphereMQ"/>
-  </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.msicomp.MsiConditionComponent">
-    <ROW Feature_="ServiceControl" Level="1" Condition="AI_SERVICE_STATE=&quot;Not Found&quot;" Options="1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
     <ROW Dialog_="AdminBrowseDlg" Control="DirectoryCombo" Type="DirectoryCombo" X="68" Y="131" Width="209" Height="16" Attributes="393227" Property="TARGETDIR" Order="800" MsiKey="AdminBrowseDlg#DirectoryCombo"/>
@@ -1320,10 +1307,10 @@
     <ROW Dialog_="ConnectionDetailsDialog" Control_="Back" Event="NewDialog" Argument="InstallDlg" Condition="AI_INSTALL" Ordering="1"/>
     <ROW Dialog_="ConnectionDetailsDialog" Control_="Back" Event="NewDialog" Argument="LicenseAgreementDlg" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="2"/>
     <ROW Dialog_="SpawnDialog" Control_="Yes" Event="EndDialog" Argument="Return" Condition="1" Ordering="100"/>
-    <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="8"/>
-    <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="SpawnDialog" Argument="OutOfRbDiskDlg" Condition="AI_INSTALL AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND (PROMPTROLLBACKCOST=&quot;P&quot; OR NOT PROMPTROLLBACKCOST)" Ordering="9"/>
-    <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="EnableRollback" Argument="False" Condition="AI_INSTALL AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND PROMPTROLLBACKCOST=&quot;D&quot;" Ordering="10"/>
-    <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="SpawnDialog" Argument="OutOfDiskDlg" Condition="AI_INSTALL AND ( (OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 1) OR (OutOfDiskSpace = 1 AND PROMPTROLLBACKCOST=&quot;F&quot;) )" Ordering="11"/>
+    <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="6"/>
+    <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="SpawnDialog" Argument="OutOfRbDiskDlg" Condition="AI_INSTALL AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND (PROMPTROLLBACKCOST=&quot;P&quot; OR NOT PROMPTROLLBACKCOST)" Ordering="7"/>
+    <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="EnableRollback" Argument="False" Condition="AI_INSTALL AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND PROMPTROLLBACKCOST=&quot;D&quot;" Ordering="8"/>
+    <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="SpawnDialog" Argument="OutOfDiskDlg" Condition="AI_INSTALL AND ( (OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 1) OR (OutOfDiskSpace = 1 AND PROMPTROLLBACKCOST=&quot;F&quot;) )" Ordering="9"/>
     <ROW Dialog_="LicenseAgreementDlg" Control_="AgreeInstall" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="102"/>
     <ROW Dialog_="LicenseAgreementDlg" Control_="AgreeInstall" Event="SpawnDialog" Argument="OutOfRbDiskDlg" Condition="AI_INSTALL AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND (PROMPTROLLBACKCOST=&quot;P&quot; OR NOT PROMPTROLLBACKCOST)" Ordering="103"/>
     <ROW Dialog_="LicenseAgreementDlg" Control_="AgreeInstall" Event="EnableRollback" Argument="False" Condition="AI_INSTALL AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND PROMPTROLLBACKCOST=&quot;D&quot;" Ordering="104"/>
@@ -1344,7 +1331,7 @@
     <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="ShortcutsDialog" Condition="AI_INSTALL" Ordering="101"/>
     <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="CustomSelectionDialog" Condition="AI_INSTALL" Ordering="1"/>
     <ROW Dialog_="RavenDBDialog" Control_="Cancel" Event="SpawnDialog" Argument="CancelDlg" Condition="1" Ordering="100"/>
-    <ROW Dialog_="RavenDBDialog" Control_="Next" Event="NewDialog" Argument="CustomSelectionDialog" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="RavenDBDialog" Control_="Next" Event="NewDialog" Argument="CustomSelectionDialog" Condition="AI_INSTALL" Ordering="3"/>
     <ROW Dialog_="RavenDBDialog" Control_="Back" Event="NewDialog" Argument="ConnectionDetailsDialog" Condition="AI_INSTALL" Ordering="1"/>
     <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="[INSTALL_ALL_SHORTCUTS]" Argument="install" Condition="AI_INSTALL" Ordering="3"/>
     <ROW Dialog_="ShortcutsDialog" Control_="ShortcutsDialogDialogInitializer" Event="[SAMPLES_SH]" Argument="[~]" Condition="AI_INSTALL AND ( NOT (((&amp;Samples = 3) AND NOT (!Samples = 3))) )" Ordering="1"/>
@@ -1355,17 +1342,13 @@
     <ROW Dialog_="LicenseAgreementDlg" Control_="LicenseAgreementDlgDialogInitializer" Event="[STORE_DEFAULT_VISUAL_STYLE]" Argument="[AI_CONTROL_VISUAL_STYLE]" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="101"/>
     <ROW Dialog_="LicenseAgreementDlg" Control_="LicenseAgreementDlgDialogInitializer" Event="[AI_CONTROL_VISUAL_STYLE]" Argument="15066597" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="102"/>
     <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="[PORT_VAL.CB8171C5_FE21_41EE_BC42_72123C0AD0F7]" Argument="33333" Condition="AI_INSTALL" Ordering="5"/>
-    <ROW Dialog_="ExitDialog" Control_="Finish" Event="DoAction" Argument="AI_CleanPrereq" Condition="1" Ordering="101"/>
-    <ROW Dialog_="FatalError" Control_="Finish" Event="DoAction" Argument="AI_CleanPrereq" Condition="1" Ordering="201"/>
-    <ROW Dialog_="UserExit" Control_="Finish" Event="DoAction" Argument="AI_CleanPrereq" Condition="1" Ordering="101"/>
     <ROW Dialog_="ServiceControlDialog" Control_="Cancel" Event="SpawnDialog" Argument="CancelDlg" Condition="1" Ordering="100"/>
-    <ROW Dialog_="RavenDBDialog" Control_="Next" Event="NewDialog" Argument="ServiceControlDialog" Condition="AI_INSTALL AND AI_SERVICE_STATE=&quot;Not Found&quot;" Ordering="2"/>
-    <ROW Dialog_="CustomSelectionDialog" Control_="Back" Event="NewDialog" Argument="ServiceControlDialog" Condition="AI_INSTALL AND AI_SERVICE_STATE=&quot;Not Found&quot;" Ordering="2"/>
-    <ROW Dialog_="ServiceControlDialog" Control_="Next" Event="NewDialog" Argument="CustomSelectionDialog" Condition="AI_INSTALL AND AI_SERVICE_STATE=&quot;Not Found&quot;" Ordering="1"/>
-    <ROW Dialog_="ServiceControlDialog" Control_="Back" Event="NewDialog" Argument="RavenDBDialog" Condition="AI_INSTALL AND AI_SERVICE_STATE=&quot;Not Found&quot;" Ordering="1"/>
-    <ROW Dialog_="InstallDlg" Control_="InstallDlgDialogInitializer" Event="[INST_NAME]" Argument="ServiceControl@[ComputerName]" Condition="AI_INSTALL" Ordering="98"/>
-    <ROW Dialog_="InstallDlg" Control_="InstallDlgDialogInitializer" Event="[INST_DESCRIPTION]" Argument="ServiceControl on [ComputerName]" Condition="AI_INSTALL" Ordering="99"/>
-    <ROW Dialog_="InstallDlg" Control_="ImageButton_1" Event="[TRANSPORT_TYPE]" Argument="NServiceBus.Msmq, NServiceBus.Core" Condition="AI_INSTALL" Ordering="7"/>
+    <ROW Dialog_="RavenDBDialog" Control_="Next" Event="[ServiceControlDialog_Cond]" Argument="1" Condition="&quot;1&quot;=&quot;2&quot;" Ordering="2"/>
+    <ROW Dialog_="RavenDBDialog" Control_="Next" Event="[ServiceControlDialog_Cond]" Argument="{}" Condition="1" Ordering="1"/>
+    <ROW Dialog_="RavenDBDialog" Control_="Next" Event="NewDialog" Argument="ServiceControlDialog" Condition="AI_INSTALL AND ServiceControlDialog_Cond" Ordering="4"/>
+    <ROW Dialog_="CustomSelectionDialog" Control_="Back" Event="NewDialog" Argument="ServiceControlDialog" Condition="AI_INSTALL AND ServiceControlDialog_Cond" Ordering="2"/>
+    <ROW Dialog_="ServiceControlDialog" Control_="Next" Event="NewDialog" Argument="CustomSelectionDialog" Condition="AI_INSTALL AND ServiceControlDialog_Cond" Ordering="1"/>
+    <ROW Dialog_="ServiceControlDialog" Control_="Back" Event="NewDialog" Argument="RavenDBDialog" Condition="AI_INSTALL AND ServiceControlDialog_Cond" Ordering="1"/>
     <ATTRIBUTE name="DeletedRows" value="ExitDialog#ReadmeButton#[AiEventsControl]#ViewReadmeCheckBox#1@InstallDlg#Browse#SpawnDialog#BrowseDlg#1@ExitDialog#RunButton#[AiEventsControl]#LaunchProdCheckBox#1@InstallDlg#InstallButton#[AiEventsControl]#Next#1@InstallDlg#InstallButton#SetTargetPath#APPDIR#AI_INSTALL@InstallDlg#Browse#[_BrowseProperty]#APPDIR#1@LicenseAgreementDlg#AgreeInstall#[AiEventsControl]#Next#1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
@@ -1381,8 +1364,6 @@
     <ROW Action="AI_AppSearchEx" Type="1" Source="Prereq.dll" Target="DoAppSearchEx"/>
     <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH_ORIGINAL" Target="[AI_SETUPEXEPATH]"/>
     <ROW Action="AI_ChooseTextStyles" Type="1" Source="aicustact.dll" Target="ChooseTextStyles"/>
-    <ROW Action="AI_CleanPrereq" Type="65" Source="Prereq.dll" Target="CleanPrereq" WithoutSeq="true"/>
-    <ROW Action="AI_ConfigureChainer" Type="1" Source="Prereq.dll" Target="ConfigurePrereqLauncher"/>
     <ROW Action="AI_DATA_SETTER" Type="51" Source="AI_ExtractFiles" Target="[AI_SETUPEXEPATH]"/>
     <ROW Action="AI_DATA_SETTER_1" Type="51" Source="CustomActionData" Target="Particular.ServiceControl"/>
     <ROW Action="AI_DATA_SETTER_2" Type="51" Source="InstallRavenDb" Target="[RAVEN_PORT]"/>
@@ -1392,18 +1373,13 @@
     <ROW Action="AI_DeleteRCadLzma" Type="51" Source="AI_DeleteRLzma" Target="[AI_SETUPEXEPATH]"/>
     <ROW Action="AI_DeleteRLzma" Type="1281" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
     <ROW Action="AI_DoRemoveExternalUIStub" Type="3585" Source="ExternalUICleaner.dll" Target="DoRemoveExternalUIStub" WithoutSeq="true"/>
-    <ROW Action="AI_DownloadPrereq" Type="1" Source="Prereq.dll" Target="DownloadPrereq"/>
     <ROW Action="AI_EstimateExtractFiles" Type="1" Source="Prereq.dll" Target="EstimateExtractFiles"/>
     <ROW Action="AI_ExtractCadLzma" Type="51" Source="AI_ExtractLzma" Target="[AI_SETUPEXEPATH]"/>
     <ROW Action="AI_ExtractFiles" Type="1025" Source="Prereq.dll" Target="ExtractSourceFiles" AdditionalSeq="AI_DATA_SETTER"/>
     <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
-    <ROW Action="AI_ExtractPrereq" Type="65" Source="Prereq.dll" Target="ExtractPrereq"/>
     <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
     <ROW Action="AI_GetArpIconPath" Type="1" Source="aicustact.dll" Target="GetArpIconPath"/>
     <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
-    <ROW Action="AI_InstallPostPrerequisite" Type="1" Source="Prereq.dll" Target="InstallPostPrereq"/>
-    <ROW Action="AI_InstallPrerequisite" Type="65" Source="Prereq.dll" Target="InstallPrereq"/>
-    <ROW Action="AI_LaunchChainer" Type="242" Source="AI_PREREQ_CHAINER"/>
     <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
     <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH" Target="[AI_SETUPEXEPATH_ORIGINAL]"/>
     <ROW Action="AI_RemoveExternalUIStub" Type="1" Source="ExternalUICleaner.dll" Target="RemoveExternalUIStub"/>
@@ -1411,7 +1387,6 @@
     <ROW Action="AI_ResolveLocalizedCredentials" Type="1" Source="aicustact.dll" Target="GetLocalizedCredentials"/>
     <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
     <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
-    <ROW Action="AI_VerifyPrereq" Type="1" Source="Prereq.dll" Target="VerifyPrereq"/>
     <ROW Action="Check_Internet_Connection" Type="1" Source="aicustact.dll_1" Target="ActiveInternetConnection"/>
     <ROW Action="CollectTroubleshootInfo" Type="51" Source="TRB_INFO_REG_VALUE" Target="1"/>
     <ROW Action="DetectService" Type="1" Source="aicustact.dll" Target="DetectService" AdditionalSeq="AI_DATA_SETTER_1"/>
@@ -1454,8 +1429,8 @@
     <ROW Action="AI_GetArpIconPath" Sequence="51"/>
     <ROW Action="AI_RemoveExternalUIStub" Condition="(REMOVE=&quot;ALL&quot;) AND ((VersionNT &gt; 500) OR((VersionNT = 500) AND (ServicePackLevel &gt;= 4)))" Sequence="1501"/>
     <ROW Action="InstallFinalize" Sequence="6590" SeqType="0" MsiKey="InstallFinalize"/>
-    <ROW Action="Check_Internet_Connection" Condition="( NOT Installed )" Sequence="6593"/>
-    <ROW Action="Launch_Online_URL" Condition="( NOT Installed ) AND ( AI_INTERNET_CONNECTION=&quot;AI_INET_CON_SUCCESS&quot; )" Sequence="6594"/>
+    <ROW Action="Check_Internet_Connection" Condition="( NOT Installed )" Sequence="6591"/>
+    <ROW Action="Launch_Online_URL" Condition="( NOT Installed ) AND ( AI_INTERNET_CONNECTION=&quot;AI_INET_CON_SUCCESS&quot; )" Sequence="6592"/>
     <ROW Action="CollectTroubleshootInfo" Condition="( NOT Installed ) AND ( TB_INFO )" Sequence="203"/>
     <ROW Action="InstallPerformanceCounters" Condition="( NOT Installed ) AND ( ABC )" Sequence="1601"/>
     <ROW Action="InstallRavenDb" Condition="( ( NOT Installed ) OR ( Installed AND REMOVE &lt;&gt; &quot;ALL&quot; AND AI_INSTALL_MODE &lt;&gt; &quot;Remove&quot; ) ) AND ( INSTALL_RAVENDB )" Sequence="1603"/>
@@ -1478,9 +1453,6 @@
     <ROW Action="GetTrialDate" Condition="( ( NOT Installed ) OR ( Installed AND REMOVE &lt;&gt; &quot;ALL&quot; AND AI_INSTALL_MODE &lt;&gt; &quot;Remove&quot; ) )" Sequence="202"/>
     <ROW Action="AI_AiRemoveFilesRollback" Sequence="3099"/>
     <ROW Action="AI_DATA_SETTER_2" Condition="( ( NOT Installed ) OR ( Installed AND REMOVE &lt;&gt; &quot;ALL&quot; AND AI_INSTALL_MODE &lt;&gt; &quot;Remove&quot; ) ) AND ( INSTALL_RAVENDB )" Sequence="1602"/>
-    <ROW Action="AI_ConfigureChainer" Condition="((UILevel = 2) OR (UILevel = 3)) AND (NOT UPGRADINGPRODUCTCODE)" Sequence="6591"/>
-    <ROW Action="AI_LaunchChainer" Condition="AI_PREREQ_CHAINER AND (NOT UPGRADINGPRODUCTCODE)" Sequence="6592"/>
-    <ROW Action="AI_VerifyPrereq" Sequence="1101"/>
     <ROW Action="AI_AiRemoveFilesImmediate" Sequence="3499"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
@@ -1493,10 +1465,6 @@
     <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="102"/>
     <ROW Action="ExecuteAction" Sequence="1297" SeqType="0" MsiKey="ExecuteAction"/>
     <ROW Action="AI_AppSearchEx" Sequence="101"/>
-    <ROW Action="AI_DownloadPrereq" Sequence="1294"/>
-    <ROW Action="AI_ExtractPrereq" Sequence="1295"/>
-    <ROW Action="AI_InstallPrerequisite" Sequence="1296"/>
-    <ROW Action="AI_InstallPostPrerequisite" Sequence="1298"/>
     <ROW Action="UpdateFeaturesInstallStates" Condition="( NOT Installed )" Sequence="1279"/>
     <ROW Action="DetectService" Sequence="202"/>
     <ROW Action="AI_DATA_SETTER_1" Sequence="201"/>
@@ -1538,7 +1506,6 @@
     <ROW Registry="Publisher" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Publisher" Value="[Manufacturer]" Component_="AI_CustomARPName"/>
     <ROW Registry="Samples_SH" Root="2" Key="Software\ParticularSoftware\ServiceBus\[ProductName]" Name="Samples_SH" Value="[SAMPLES_SH]" Component_="Samples_SH"/>
     <ROW Registry="ServiceBus_1" Root="2" Key="Software\[X64_REG]\ServiceBus" Name="+" Component_="ServiceBus"/>
-    <ROW Registry="ServiceControl" Root="-1" Key="Software\Caphyon\Advanced Installer\Prereqs\[ProductCode]\[ProductVersion]" Name="ServiceControl" Value="1" Component_="ServiceControl"/>
     <ROW Registry="Tools_SH" Root="2" Key="Software\ParticularSoftware\ServiceBus\[ProductName]" Name="Tools_SH" Value="[TOOLS_SH]" Component_="Tools_SH"/>
     <ROW Registry="TrialStart" Root="1" Key="Software\ParticularSoftware\NServicebus" Name="TrialStart" Value="[TRIAL_DATE]" Component_="TrialStart"/>
     <ROW Registry="URLInfoAbout" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="URLInfoAbout" Value="[ARPURLINFOABOUT]" Component_="AI_CustomARPName"/>
@@ -1570,12 +1537,7 @@
     <ROW UpgradeCode="[|UpgradeCode]" VersionMax="[|ProductVersion]" Attributes="1025" ActionProperty="OLDPRODUCTS"/>
     <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
   </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
-    <ROW PrereqKey="ServiceControl" DisplayName="ServiceControl" VersionMin="1.0.0.0" SetupFileUrl="bundles\Particular.ServiceControl.exe" Location="0" ExactSize="0" Win9xVersions="Windows 9x/ME" Operator="1" ComLine="/exenoui /qn PORT_VAL=&quot;[PORT_VAL]&quot; TRANSPORT_TYPE=&quot;[TRANSPORT_TYPE]&quot; INST_NAME=&quot;[INST_NAME]&quot; INST_DESCRIPTION=&quot;[INST_DESCRIPTION]&quot;" BasicUiComLine="/exenoui /qn PORT_VAL=&quot;[PORT_VAL]&quot; TRANSPORT_TYPE=&quot;[TRANSPORT_TYPE]&quot; INST_NAME=&quot;[INST_NAME]&quot; INST_DESCRIPTION=&quot;[INST_DESCRIPTION]&quot;" NoUiComLine="/exenoui /qn PORT_VAL=&quot;[PORT_VAL]&quot; TRANSPORT_TYPE=&quot;[TRANSPORT_TYPE]&quot; INST_NAME=&quot;[INST_NAME]&quot; INST_DESCRIPTION=&quot;[INST_DESCRIPTION]&quot;" Options="i" TargetName="Particular.ServiceControl.exe" Type="1" Feature="ServiceControl"/>
-    <ATTRIBUTE name="PrereqsOrder" value="ServiceControl"/>
-  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.PreReqSearchComponent">
-    <ROW SearchKey="KeyName" Prereq="ServiceControl" SearchType="1" SearchString="HKLM\Software\KeyName" Order="1" Property="PREREQSEARCH"/>
     <ROW SearchKey="_" SearchType="3" SearchString="{EFA58615-CE26-4FF0-800E-12444FDF9FA2}" Order="1" Property="BETA_40"/>
     <ROW SearchKey="__1" SearchType="3" SearchString="{2F8F8010-0D1E-430C-B14F-A026AFEAC4E2}" Order="2" Property="BETA_40_1"/>
   </COMPONENT>
