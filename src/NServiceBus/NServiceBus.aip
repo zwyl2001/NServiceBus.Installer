@@ -71,7 +71,7 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="DTC" Feature_Parent="PrepMachine" Title="Install DTC" Description="Install Microsoft Message Queuing (requires DTC)" Display="3" Level="1" Directory_="APPDIR" Attributes="0" Components="INSTALL_RAVENDB"/>
     <ROW Feature="MSMQ" Feature_Parent="DTC" Title="Install MSMQ" Description="Install the Microsoft Distributed Transaction Coordinator (required for MSMQ)" Display="3" Level="1" Directory_="APPDIR" Attributes="0" Components="INSTALL_RAVENDB"/>
-    <ROW Feature="NServiceBus" Title="NServiceBus" Description="NServiceBus main application" Display="3" Level="1" Directory_="APPDIR" Attributes="16" Components="AI_ExePath AuditQueue AuditQueue_1 BinariesSH ErrorQueue ErrorQueue_1 INSTALL_RAVENDB LICENSE.md_1 ProductInformation SHORTCUTDIR Samples_SH ServiceBus Tools_SH TrialStart UploadEndpointURL UploadEndpointURL_1 UsageDataCollectionApproved UsageDataCollectionApproved_1 X64_REG"/>
+    <ROW Feature="NServiceBus" Title="NServiceBus" Description="NServiceBus main application" Display="3" Level="1" Directory_="APPDIR" Attributes="16" Components="AuditQueue AuditQueue_1 BinariesSH ErrorQueue ErrorQueue_1 INSTALL_RAVENDB LICENSE.md_1 ProductInformation SHORTCUTDIR Samples_SH ServiceBus Tools_SH TrialStart UploadEndpointURL UploadEndpointURL_1 UsageDataCollectionApproved UsageDataCollectionApproved_1 X64_REG"/>
     <ROW Feature="PrepMachine" Feature_Parent="NServiceBus" Title="Prepare My Machine" Description="Install Windows components used by some of NServiceBus features" Display="9" Level="1" Directory_="APPDIR" Attributes="0" Components="INSTALL_RAVENDB"/>
     <ATTRIBUTE name="CurrentFeature" value="DTC"/>
   </COMPONENT>
@@ -81,6 +81,9 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AiPersistentPropComponent">
     <ROW Property="INSTALL_RAVENDB" Registry="INSTALL_RAVENDB" HklmSearch="INSTALL_RAVENDB" HkcuSearch="INSTALL_RAVENDB_1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.AiRegistryAliasComponent">
+    <ROW AliasRowId="DisplayVersion" AliasRowOperation="2" Value="[VERSION_FROM_PI]"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AiRemoveFileComponent">
     <ROW RemoveFile="_" Options="3"/>
@@ -457,8 +460,8 @@
     <ROW Action="InstallPerformanceCounters" Type="1025" Source="Particular.CustomActions.CA.dll" Target="InstallPerformanceCounters"/>
     <ROW Action="InstallRavenDb" Type="1025" Source="Particular.CustomActions.CA.dll" Target="InstallRavenDb" AdditionalSeq="AI_DATA_SETTER_2"/>
     <ROW Action="Launch_Online_URL" Type="194" Source="viewer.exe" Target="http://www.particular.net/Installation-completed?installer=NServiceBus&amp;version=[ProductVersion]&amp;method=msi" Options="1"/>
-    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[ProgramFilesFolder]Particular Software\[ProductName]\v[MY_VERSION]"/>
-    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]" MultiBuildTarget="DefaultBuild:[ProgramMenuFolder]Particular Software\[ProductName]\v[MY_VERSION]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[ProgramFilesFolder]Particular Software\[ProductName]\v[VERSION_FROM_PI]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]" MultiBuildTarget="DefaultBuild:[ProgramMenuFolder]Particular Software\[ProductName]\v[VERSION_FROM_PI]"/>
     <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiDialogComponent">
@@ -478,8 +481,8 @@
     <ROW Name="NServiceBus.exe" SourcePath="res\NServiceBus.ico" Index="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIniFileComponent">
-    <ROW IniFile="URL" FileName="Releas~1.url|Release notes.url" DirProperty="SHORTCUTDIR" Section="InternetShortcut" Key="URL" Value="https://github.com/Particular/NServiceBus/releases/tag/[ProductVersion]" Action="0" Component_="AI_ExePath"/>
-    <ROW IniFile="WorkingDirectory" FileName="Releas~1.url|Release notes.url" DirProperty="SHORTCUTDIR" Section="InternetShortcut" Key="WorkingDirectory" Value="[SHORTCUTDIR]" Action="0" Component_="AI_ExePath"/>
+    <ROW IniFile="URL" FileName="Releas~1.url|Release notes.url" DirProperty="SHORTCUTDIR" Section="InternetShortcut" Key="URL" Value="https://github.com/Particular/NServiceBus/releases/tag/[VERSION_FROM_PI]" Action="0" Component_="SHORTCUTDIR"/>
+    <ROW IniFile="WorkingDirectory" FileName="Releas~1.url|Release notes.url" DirProperty="SHORTCUTDIR" Section="InternetShortcut" Key="WorkingDirectory" Value="[SHORTCUTDIR]" Action="0" Component_="SHORTCUTDIR"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
     <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1502"/>
