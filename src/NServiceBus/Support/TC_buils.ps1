@@ -22,7 +22,7 @@ $AdvancedInstallerPath = Get-RegistryValue "HKLM:\SOFTWARE\Wow6432Node\Caphyon\A
 
 $script:AdvinstCLI = $AdvancedInstallerPath + "bin\x86\AdvancedInstaller.com"
 
-$archive = "Particular.NServiceBus-4.1" 
+$archive = "Particular.NServiceBus-4.4" 
 
 $stability = "Final"
 
@@ -37,7 +37,7 @@ else
    $preReleaseName = $preReleaseNameValue
 }
 
-$versionValue = "4.1.0"
+$versionValue = "4.4.0"
 
 $baseDir = "."
 
@@ -55,7 +55,7 @@ exec { &$script:AdvinstCLI /edit $setupProjectFile /SetOutputLocation -buildname
 
 exec { &$script:AdvinstCLI /edit $setupProjectFile /SetProperty OPT_PRERELEASE_NAME="$preReleaseName" }
 
-exec { &$script:AdvinstCLI /edit $setupProjectFile /SetProperty MY_VERSION="4.1" }
+exec { &$script:AdvinstCLI /edit $setupProjectFile /SetProperty MY_VERSION="4.4" }
     
 # Build setup with Advanced Installer 
 exec { &$script:AdvinstCLI /rebuild $setupProjectFile }
