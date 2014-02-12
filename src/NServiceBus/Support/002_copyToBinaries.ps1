@@ -55,7 +55,7 @@ Copy-Item $log4NetDit -Destination $binariesFolder
 #Tools
 if(!(Test-Path "$toolsFolder")){ md "$toolsFolder";}
 
-Copy-item "$packagesFolder\NServiceBus.Tools\*" -Destination "$toolsFolder\"-Include $includeFileList -Force 
+Copy-item "$packagesFolder\NServiceBus.Tools\*" -Destination "$toolsFolder\" -Exclude *.nupkg -Force 
 
 Write-Host("Done copying binaries and tools")
 
@@ -65,13 +65,6 @@ $res_binaryFolder =  $rootFolder + '\NServiceBus\res-binary\'
 Write-Host("Copying Dependencies to $res_binaryFolder")
 
 Copy-Item "$packagesFolder\Particular.CustomActions\lib\net40\*" -Destination $res_binaryFolder -Recurse -force
-
-# ServiceControl.exe installer
-$bundlesFolder = $rootFolder + '\NServiceBus\bundles\'
-
-Write-Host("Copying ServiceControl installer to $bundlesFolder")
-
-get-childItem $bundlesFolder\*.exe | rename-item -newname { $_.name -replace $_.name, 'Particular.ServiceControl.exe' }
 
 Write-Host("002_copyToBinaries done.")
 
